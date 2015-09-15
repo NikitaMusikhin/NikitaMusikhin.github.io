@@ -31,11 +31,16 @@ body{background: #2ECC71;}
 .section.title h4 {font-family: 'HelveticaNeueCyr-Roman', sans-serif ;font-size: 15px ;color:#FFFFFF ;position: relative; margin-top:100px ;top:5px}
 .scroll_bottom {position: absolute; top:85%; left:0; bottom:0; right:0; margin:auto; width:21px; height:14px; z-index:10;}
 #illustration{position: absolute;top:55%;bottom:0;left: 0;right: 0;margin:auto;width:1146px; height:502px; z-index:9;
-background: url(../img/illustration.svg);
-    background-size: 2800px 3950px;
-    background-position: 50% 9%;
-    background-repeat: no-repeat;
+background: url(../img/ill.png);
 }  
+/*
+#illustration{position: absolute;top:55%;bottom:0;left: 0;right: 0;margin:auto;width:1146px; height:502px; z-index:9;
+background: url(../img/illustration.svg);
+background-size: 2800px 3950px;
+background-position: 50% 9%;
+background-repeat: no-repeat;
+}  
+*/
 .demo_b{background: rgba(0,0,0,0.8);border-radius: 3px;}
 .demo_d{background: rgba(90, 103, 121, 0.95);border-radius: 3px;}
 .demo_e{background: #f56969;border-radius: 3px;}
