@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>IML js</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/one-page-skroll.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/one-page-skroll.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="js/iml.js"></script>
+    <script src="js/validation.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#mdex').modal("[data-modal='MyModal2']");
+            $(".main").onepage_scroll();
+            var bg = $('.butt-d').css('background-color');
+            $('.butt-d').hover(function(){
+                $(this).stop().animate({backgroundColor:'#EB6759'},300);
+            },function(){
+                $(this).stop().animate({backgroundColor:bg}, 300);
+            });
+            
+            var bg_sec = $('#send_report').css('background-color');
+            $('#send_report').hover(function(){
+                $(this).stop().animate({backgroundColor:'#ABEBC6'},300);
+            },function(){
+                $(this).stop().animate({backgroundColor:bg_sec}, 300);
+            });	
+			
+			$(".datagrid").mCustomScrollbar();
+            
+            $('#send_bug').submit(function(event){
+                var data = {
+                    mail:$('#e-mail').val(),
+                    text:$('#bug_descript').val()
+                }
+                if(validator.validate(data)!== true){
+                    event.preventDefault();
+                }
+            });
+        });
+	</script>
+</head>
+<body>
+	<div class="main">
+		<section class="section title">
+        <div class="logo">iml</div>
+        <h4>Interface-Micro-Library</br>
+Easily customizable jQuery plugin for tooltip/popover/modal</h4>
+	  <div id="illustration">
+    </div>
+    <div class="scroll_bottom">
+        <div class="mouse"><div class="wheel"></div></div>
+        <div>
+        <span class="unu"></span> <span class="doi"></span> <span class="trei"></span>
+        </div>
+    </div>
+		</section>
+		<section class="section examples">
+            <div class="examples">
+                <div class="example-1">
+                    <h3>Tooltips</h3>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</h2>
+                <div class="code">
+&lt;div class=&quot;ex&quot; <span>data-interface</span>=&quot;<span>tooltip</span>&quot; <span>data-content</span>=&quot;<span>Tooltip on</span>&quot;&gt;top&lt;/div&gt;   
+               </div>
+                <div class="ex" data-interface="tooltip" data-position="left" data-content="Tooltip on left">left</div>
+                <div class="ex" data-interface="tooltip" data-content="Tooltip on top">top</div>
+                <div class="ex" data-interface="tooltip" data-position="bottom" data-content="Tooltip on bottom">bottom</div>
+                <div class="ex" data-interface="tooltip" data-position="right"  data-content="Tooltip on right">right</div>
+                </div>
+                <div class="example-2">
+                    <h3>Popovers</h3>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</h2>
+                <div class="code">&lt;div class=&quot;ex&quot; <span>data-interface</span>=&quot;<span>popover</span>&quot; <span>data-content</span>=&quot;<span>&lt;li&gt;switch on&lt;/li&gt;&lt;li&gt;switch on&lt;/li&gt;</span>&quot;&gt;top&lt;/div&gt;</div>
+                <div class="ex" data-interface="popover" data-position="left" data-content="<li>switch on</li><li>switch on</li>">left</div>
+                <div class="ex" data-interface="popover" data-content="<li>switch on</li><li>switch on</li>">top</div>
+                <div class="ex" data-interface="popover" data-position="bottom"data-content="<li>switch on</li><li>switch on</li>">bottom</div>
+                <div class="ex" data-interface="popover" data-position="right" data-content="<li>switch on</li><li>switch on</li>">right</div>
+                    
+                </div>
+                <div class="example-3">
+                    <h3>Modals</h3>
+                            <div class="code_t">
+<pre>$(document).ready(function(){
+   $('<span>#mdex</span>').modal("<span>[data-modal='MyModal2']</span>");
+});
+
+</pre>
+                            &lt;div class=&quot;ex&quot; id=&quot;mdex&quot; <span>data-interface</span>="<span>modal</span>" <span>data-width</span>=&quot;<span>500px</span>&quot; <span>data-height</span>=&quot;<span>300px</span>&quot;&gt;modal window&lt;/div&gt;
+                            </div>
+               <div class="ex" id="mdex" data-width="500px" data-height="300px">modal window</div>
+               </div>
+            </div>
+		</section>
+		<section class="section instruction">
+            <div class="examples">
+			<div class="instruction"><h3>IML CDN</h3><div class="opsn" >
+                   &lt;script <span>src</span>=&quot;<span>https://musikhin.com/iml/js/iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+                    &lt;script <span>src</span>=&quot;<span>https://musikhin.com/iml/css/iml.css</span>&quot;&gt;&lt;/script&gt;
+                </div></div>
+                <div class="example-1"><h3>Include IML.js</h3><div class="code_s">
+&lt;script <span>src</span>=&quot;<span>https://code.jquery.com/jquery-2.1.4.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+&lt;script type=&quot;text/javascript&quot; <span>src</span>=&quot;<span>iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+&lt;link rel=&quot;stylesheet&quot; <span>href</span>=&quot;<span>iml.css</span>&quot;&gt;
+    
+</div></div>
+               <div class="example-2"><h3>Include IML.js CDN</h3><div class="code_s">
+&lt;script <span>src</span>=&quot;<span>https://code.jquery.com/jquery-2.1.4.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+&lt;script type=&quot;text/javascript&quot; <span>src</span>=&quot;<span>iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+&lt;link rel=&quot;stylesheet&quot; <span>href</span>=&quot;<span>iml.css</span>&quot;&gt;
+    
+</div></div>
+                <div class="instruction"><h3>Themes Tooltips/Popovers</h3><div class="opsn">                    
+                    <div class="demo demo_b" data-interface="tooltip" data-theme="black">black</div>  
+                    <div class="demo demo_d" data-interface="tooltip" data-theme="smoke">smoke</div>
+                    <div class="demo demo_w" data-interface="tooltip" data-theme="white">white</div>               
+                    <div class="demo demo_e" data-interface="tooltip" data-theme="error">error</div>
+                    <div class="demo demo_s" data-interface="tooltip" data-theme="success">success</div>
+                </div>
+                </div>
+            </div>
+		</section>
+		<section class="section settings">
+			 <div class="settings">
+			 <h3>Options</h3>
+			<div class="datagrid_z">
+			<li>Name</li>
+			<li>Interface</li>
+			<li>Default</li>
+			<li>Description</li>
+			</div>
+                <div class="datagrid mCustomScrollbar" data-mcs-theme="dark" >
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>trigger-on</td>
+                            <td>tooltips</br>popovers</br>modals</td>
+                            <td>'mouseover'/'click'/'click'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>trigger-off</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>'mouseleave'/'click'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>shift</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>10</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>content</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>'Enter the text'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>popovers</td>
+                            <td>'none'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                         <tr>
+                            <td>position</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>'top'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                         <tr>
+                            <td>theme</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>'black'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>radius</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>'3px'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>delay</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>100</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>fadeIn</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>150</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>fadeOut</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>150</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>codeRemove</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>'on'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>setClass</td>
+                            <td>tooltips</br>popovers</td>
+                            <td>undefined</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>background</td>
+                            <td>modal</td>
+                            <td>'#fff'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>modal</td>
+                            <td>'300'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>modal</td>
+                            <td>'500'</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>fadeIn-modal/fadeOut-modal</td>
+                            <td>modal</td>
+                            <td>100</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                        <tr>
+                            <td>fadeIn-bg/fadeOut-bg</td>
+                            <td>modal</td>
+                            <td>300</td>
+                            <td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip
+
+true - Add a fading effect
+false - Do not add a fading effect</td>
+                        </tr>
+                      </tbody>
+                    </table>            
+                </div>
+            </div>
+			
+			
+			
+		</section>
+		<section class="section downloads">
+			<div class="logo_bottom">iml</div>
+            <h4>Interface-Micro-Library</br>
+Developed under the MIT license <a href="http://opensource.org/licenses/MIT" target="_blank">http://opensource.org/licenses/MIT</a>
+</h4>
+        <div class="butt-d"><a href="https://github.com/NikitaMusikhin/interface-micro-library" target="_blank" >Download on GitHub</a></div>
+        <div class="report"><a href="https://github.com/NikitaMusikhin/interface-micro-library/issues" target="_blank">Issues</a></div>
+        <div id="social">
+            <a href="https://github.com/NikitaMusikhin/interface-micro-library" target="_blank"><img src="img/gh.png" alt="" data-interface="tooltip" data-content="My profile on GitHub" data-shift="15" height="26" ></a>
+            <a href="https://twitter.com/NikitaWebDev" target="_blank"><img src="img/twi.png" alt="" data-interface="tooltip" data-content="My profile on Twitter" data-shift="15" height="26"></a>
+        </div>   
+		</section>
+	</div>
+        <div  class="modal" data-modal="MyModal2">
+            <div class="modal_title">Header title</div>
+            <div class="modal_content2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div class="close"><img src="img/close.png" alt=""></div>
+        </div>
+</body>
+</html>
