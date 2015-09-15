@@ -29,8 +29,8 @@ body{background: #2ECC71;}
 .section.title {background-color: #2ECC71;}
 .logo {font-family:'Modulus Medium', sans-serif;; font-size:170px; text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); cursor: default; position: absolute ;top:0 ;left:0; bottom:0; right:0; margin:5px auto 0; width:235px ;height:140px;}
 .section.title h4 {font-family: 'HelveticaNeueCyr-Roman', sans-serif ;font-size: 15px ;color:#FFFFFF ;position: relative; margin-top:100px ;top:5px}
-.scroll_bottom {position: absolute; top:85%; left:0; bottom:0; right:0; margin:auto; width:21px; height:14px; z-index:10;}
-#illustration{position: absolute;top:55%;bottom:0;left: 0;right: 0;margin:auto;width:1146px; height:502px; z-index:9;
+.scroll_bottom {position: absolute; top:86%; left:0; bottom:0; right:0; margin:auto; width:21px; height:14px; z-index:10;}
+#illustration{position: absolute;top:58%;bottom:0;left: 0;right: 0;margin:auto;width:1146px; height:502px; z-index:9;
 background: url(../img/ill.png);
 }  
 /*
