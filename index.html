@@ -13,7 +13,6 @@
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.js"></script>
     <script type="text/javascript" src="js/iml.js"></script>
-    <script src="js/validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $('#mdex').modal("[data-modal='MyModal2']");
@@ -33,16 +32,6 @@
             });	
 			
 			$(".datagrid").mCustomScrollbar();
-            
-            $('#send_bug').submit(function(event){
-                var data = {
-                    mail:$('#e-mail').val(),
-                    text:$('#bug_descript').val()
-                }
-                if(validator.validate(data)!== true){
-                    event.preventDefault();
-                }
-            });
         });
 	</script>
 </head>
@@ -65,9 +54,7 @@ Easily customizable jQuery plugin for tooltip/popover/modal</h4>
             <div class="examples">
                 <div class="example-1">
                     <h3>Tooltips</h3>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-</h2>
+                    <h2>Example install tooltip after include jQuery and iml.js/css</h2>
                 <div class="code">
 &lt;div class=&quot;ex&quot; <span>data-interface</span>=&quot;<span>tooltip</span>&quot; <span>data-content</span>=&quot;<span>Tooltip on</span>&quot;&gt;top&lt;/div&gt;   
                </div>
@@ -78,9 +65,7 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </div>
                 <div class="example-2">
                     <h3>Popovers</h3>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-</h2>
+                    <h2>Example install popover after include jQuery and iml.js/css</h2>
                 <div class="code">&lt;div class=&quot;ex&quot; <span>data-interface</span>=&quot;<span>popover</span>&quot; <span>data-content</span>=&quot;<span>&lt;li&gt;switch on&lt;/li&gt;&lt;li&gt;switch on&lt;/li&gt;</span>&quot;&gt;top&lt;/div&gt;</div>
                 <div class="ex" data-interface="popover" data-position="left" data-content="<li>switch on</li><li>switch on</li>">left</div>
                 <div class="ex" data-interface="popover" data-content="<li>switch on</li><li>switch on</li>">top</div>
@@ -104,22 +89,22 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 		</section>
 		<section class="section instruction">
             <div class="examples">
-			<div class="instruction"><h3>IML CDN</h3><div class="opsn" >
-                   &lt;script <span>src</span>=&quot;<span>https://musikhin.com/iml/js/iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-                    &lt;script <span>src</span>=&quot;<span>https://musikhin.com/iml/css/iml.css</span>&quot;&gt;&lt;/script&gt;
+                <div class="instruction"><h3>Include IML.js</h3><div class="code_s">
+&lt;script <span>src</span>=&quot;<span>https://code.jquery.com/jquery-2.1.4.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+&lt;script type=&quot;text/javascript&quot; <span>src</span>=&quot;<span>iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
+&lt;link rel=&quot;stylesheet&quot; <span>href</span>=&quot;<span>iml.css</span>&quot;&gt;
+    
+</div></div>
+               			<div class="instruction"><h3>Activate Modal</h3><div class="opsn_sec" >
+               			<pre>
+$(document).ready(function(){
+   $('<span>#link</span>').modal("<span>[data-modal='MyModal']</span>");
+});
+
+&lt;div class=&quot;ex&quot; id=&quot;link&quot; data-width=&quot;500px&quot; data-height=&quot;300px&quot;&gt;modal&lt;/div&gt;
+&lt;div  class=&quot;modal&quot; data-modal=&quot;MyModal&quot;&gt;&lt;/div&gt;
+               </pre>
                 </div></div>
-                <div class="example-1"><h3>Include IML.js</h3><div class="code_s">
-&lt;script <span>src</span>=&quot;<span>https://code.jquery.com/jquery-2.1.4.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-&lt;script type=&quot;text/javascript&quot; <span>src</span>=&quot;<span>iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-&lt;link rel=&quot;stylesheet&quot; <span>href</span>=&quot;<span>iml.css</span>&quot;&gt;
-    
-</div></div>
-               <div class="example-2"><h3>Include IML.js CDN</h3><div class="code_s">
-&lt;script <span>src</span>=&quot;<span>https://code.jquery.com/jquery-2.1.4.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-&lt;script type=&quot;text/javascript&quot; <span>src</span>=&quot;<span>iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-&lt;link rel=&quot;stylesheet&quot; <span>href</span>=&quot;<span>iml.css</span>&quot;&gt;
-    
-</div></div>
                 <div class="instruction"><h3>Themes Tooltips/Popovers</h3><div class="opsn">                    
                     <div class="demo demo_b" data-interface="tooltip" data-theme="black">black</div>  
                     <div class="demo demo_d" data-interface="tooltip" data-theme="smoke">smoke</div>

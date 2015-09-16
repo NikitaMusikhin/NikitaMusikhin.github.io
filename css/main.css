@@ -58,12 +58,12 @@ background-repeat: no-repeat;
 
 .example-3{margin-top: 2%;display: inline-block;  width: 100%;}
 .instruction{padding-bottom: 3%;display: inline-block;width: 100%;}
-.instruction:last-child{margin-top: 2%;}
 .demo{display: inline-block;padding: 15px 20px;cursor: default;}
 .examples span{color:#C14A4F;}
 .instruction span{color:#F56969;}
-.code_s{height:100px;background: #2C81BA;margin: 20px 0 0 0;text-align: left;padding: 20px;font-family: 'AnonymousPro', sans-serif ;}
+.code_s{height:90px;background: #2C81BA;margin: 20px 0 0 0;text-align: left;padding: 20px;font-family: 'AnonymousPro', sans-serif ;}
 .opsn{background: #2C81BA;margin: 20px 0 0 0;text-align: left;padding: 20px;font-family: 'AnonymousPro', sans-serif ;}
+.opsn_sec{background: #2C81BA;margin: 20px 0 0 0;text-align: left;padding: 20px 20px 0 20px;font-family: 'AnonymousPro', sans-serif ;}
 .modal_content2 {
   padding: 0px 30px;
 }
