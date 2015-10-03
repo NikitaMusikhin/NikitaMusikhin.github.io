@@ -1,4 +1,5 @@
 $(function () {
+///---BOTTOM GRAPHICS---///
     var pie_data = [58,75,28,97],
         pie_data_f=[],
         i;
@@ -268,6 +269,7 @@ $(function () {
             innerSize: '75%'
         }]
     });
+///---MIDDLE GRAPHICS---///
     $('#graphic-1').highcharts({
         chart: {
             backgroundColor:'#F8F7F7',
@@ -291,15 +293,16 @@ $(function () {
             title: {
                 text: ''
             },
-            max:55,
+            //max:55,
             min:1,
 
         },
         tooltip: {
+            backgroundColor:'#659D9E',
             formatter: function () {
-                return '<b>' + this.series.name + '</b><br/>' +
-                    this.x + ': ' + this.y;
-            }
+                return '<span style="font-family:Avenir;color:#FFFFFF;">'+this.y+'</span>';
+            },
+            shadow:false
         },
         plotOptions: {
             area: {
@@ -353,15 +356,16 @@ $(function () {
             title: {
                 text: ''
             },
-            max:850,
+            //max:850,
             min:100,
 
         },
         tooltip: {
+            backgroundColor:'#0D0B0E',
             formatter: function () {
-                return '<b>' + this.series.name + '</b><br/>' +
-                    this.x + ': ' + this.y;
-            }
+                return '<span style="font-family:Avenir;color:#FFFFFF;">'+this.y+'</span>';
+            },
+            shadow:false
         },
         plotOptions: {
             area: {
