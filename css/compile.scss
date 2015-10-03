@@ -5,7 +5,6 @@
 }
 html,body{
     font-family: 'Avenir';
-    //background:url(../images/bg.png);background-position:50% 50%;background-repeat:no-repeat;
 }
 .wrapper{
     padding:30px 0;
@@ -67,7 +66,7 @@ html,body{
         }
         a{
             color:#8C8F97;
-            padding:0px 15px;
+            padding:20px 15px;
         }
         a:hover{
             color:#D7DADF;
@@ -109,7 +108,7 @@ html,body{
             }
         }
     }
-    .dashboard{
+    .pagename{
         padding:20px 15px;
         font-size:16px;
         color:#70757C;
@@ -244,15 +243,16 @@ select{
 
 
 .active:after {
- content: '';
- position: absolute;
- left:90%;
- top:5%;
- width: 10px;
- height: 10px;
- border: 5px solid transparent;
- border-right-color: #FFFFFF;
- z-index: 11;
+    content: '';
+    position: absolute;
+    left:90%;
+    // top:5%;
+    margin-top: 7px;
+    width: 10px;
+    height: 10px;
+    border: 5px solid transparent;
+    border-right-color: #FFFFFF;
+    z-index: 11;
 }
 
 
@@ -262,14 +262,14 @@ only screen and (max-device-width : 820px){
         margin-top:10px;
     }
     .active:after {
-     content: '';
-     position: absolute;
-     left:92%;
-     top:5%;
-     width: 10px;
-     height: 10px;
-     border: 5px solid transparent;
-     border-right-color: #FFFFFF;
-     z-index: 11;
+        content: '';
+        position: absolute;
+        left:92%;
+        margin-top: 7px;
+        width: 10px;
+        height: 10px;
+        border: 5px solid transparent;
+        border-right-color: #FFFFFF;
+        z-index: 11;
     }
 }
