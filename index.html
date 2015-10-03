@@ -1,292 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>IML jQuery plugin for tooltips/popovers and modals</title>
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" type="text/css" href="css/one-page-skroll.css">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/one-page-skroll.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	<script src="js/jquery.mCustomScrollbar.js"></script>
-    <script type="text/javascript" src="js/iml.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#mdex').modal("[data-modal='MyModal2']");
-            $(".main").onepage_scroll();
-            var bg = $('.butt-d').css('background-color');
-            $('.butt-d').hover(function(){
-                $(this).stop().animate({backgroundColor:'#EB6759'},300);
-            },function(){
-                $(this).stop().animate({backgroundColor:bg}, 300);
-            });
-            
-            var bg_sec = $('#send_report').css('background-color');
-            $('#send_report').hover(function(){
-                $(this).stop().animate({backgroundColor:'#ABEBC6'},300);
-            },function(){
-                $(this).stop().animate({backgroundColor:bg_sec}, 300);
-            });	
-			
-			$(".datagrid").mCustomScrollbar();
-        });
-	</script>
+    <script src="js/dependencies/jquery.js"></script>
+    <script src="js/graphics.js" charset="utf-8"></script>
 </head>
 <body>
-	<div class="main">
-		<section class="section title">
-        <div class="logo">iml</div>
-        <h4>Interface-Micro-Library</br>
-Easily customizable jQuery plugin for tooltip/popover/modal</h4>
-	  <div id="illustration">
-    </div>
-    <div class="scroll_bottom">
-        <div class="mouse"><div class="wheel"></div></div>
-        <div>
-        <span class="unu"></span> <span class="doi"></span> <span class="trei"></span>
-        </div>
-    </div>
-		</section>
-		<section class="section examples">
-            <div class="examples">
-                <div class="example-1">
-                    <h3>Tooltips</h3>
-                    <h2>Example install tooltip after include jQuery and iml.js/css</h2>
-                <div class="code">
-&lt;div class=&quot;ex&quot; <span>data-interface</span>=&quot;<span>tooltip</span>&quot; <span>data-content</span>=&quot;<span>Tooltip on</span>&quot;&gt;top&lt;/div&gt;   
-               </div>
-                <div class="ex" data-interface="tooltip" data-position="left" data-content="Tooltip on left">left</div>
-                <div class="ex" data-interface="tooltip" data-content="Tooltip on top">top</div>
-                <div class="ex" data-interface="tooltip" data-position="bottom" data-content="Tooltip on bottom">bottom</div>
-                <div class="ex" data-interface="tooltip" data-position="right"  data-content="Tooltip on right">right</div>
-                </div>
-                <div class="example-2">
-                    <h3>Popovers</h3>
-                    <h2>Example install popover after include jQuery and iml.js/css</h2>
-                <div class="code">&lt;div class=&quot;ex&quot; <span>data-interface</span>=&quot;<span>popover</span>&quot; <span>data-content</span>=&quot;<span>&lt;li&gt;switch on&lt;/li&gt;&lt;li&gt;switch on&lt;/li&gt;</span>&quot;&gt;top&lt;/div&gt;</div>
-                <div class="ex" data-interface="popover" data-position="left" data-content="<li>switch on</li><li>switch on</li>">left</div>
-                <div class="ex" data-interface="popover" data-content="<li>switch on</li><li>switch on</li>">top</div>
-                <div class="ex" data-interface="popover" data-position="bottom"data-content="<li>switch on</li><li>switch on</li>">bottom</div>
-                <div class="ex" data-interface="popover" data-position="right" data-content="<li>switch on</li><li>switch on</li>">right</div>
-                    
-                </div>
-                <div class="example-3">
-                    <h3>Modals</h3>
-                            <div class="code_t">
-<pre>$(document).ready(function(){
-   $('<span>#mdex</span>').modal("<span>[data-modal='MyModal2']</span>");
-});
-
-</pre>
-                            &lt;div class=&quot;ex&quot; id=&quot;mdex&quot; <span>data-interface</span>="<span>modal</span>" <span>data-width</span>=&quot;<span>500px</span>&quot; <span>data-height</span>=&quot;<span>300px</span>&quot;&gt;modal window&lt;/div&gt;
+    <div class="container">
+        <div class="row wrapper">
+            <div class="col-md-12">
+                <header class="row">
+                    <div class="hidden-sm col-md-1">
+                        <div class="row">
+                            <div class="col-md-12"  id="logo">
+                                <a href="#"><img src="images/logo.png" width="40"></a>
                             </div>
-               <div class="ex" id="mdex" data-width="500px" data-height="300px">modal window</div>
-               </div>
-            </div>
-		</section>
-		<section class="section instruction">
-            <div class="examples">
-                <div class="instruction"><h3>Include IML.js</h3><div class="code_s">
-&lt;script <span>src</span>=&quot;<span>https://code.jquery.com/jquery-2.1.4.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-&lt;script type=&quot;text/javascript&quot; <span>src</span>=&quot;<span>iml.min.js</span>&quot;&gt;&lt;/script&gt;</br>
-&lt;link rel=&quot;stylesheet&quot; <span>href</span>=&quot;<span>iml.css</span>&quot;&gt;
-    
-</div></div>
-               			<div class="instruction"><h3>Activate Modal</h3><div class="opsn_sec" >
-               			<pre>
-$(document).ready(function(){
-   $('<span>#link</span>').modal("<span>[data-modal='MyModal']</span>");
-});
-
-&lt;div class=&quot;ex&quot; id=&quot;link&quot; data-width=&quot;500px&quot; data-height=&quot;300px&quot;&gt;modal&lt;/div&gt;
-&lt;div  class=&quot;modal&quot; data-modal=&quot;MyModal&quot;&gt;&lt;/div&gt;
-               </pre>
-                </div></div>
-                <div class="instruction"><h3>Themes Tooltips/Popovers</h3><div class="opsn">                    
-                    <div class="demo demo_b" data-interface="tooltip" data-theme="black">black</div>  
-                    <div class="demo demo_d" data-interface="tooltip" data-theme="smoke">smoke</div>
-                    <div class="demo demo_w" data-interface="tooltip" data-theme="white">white</div>               
-                    <div class="demo demo_e" data-interface="tooltip" data-theme="error">error</div>
-                    <div class="demo demo_s" data-interface="tooltip" data-theme="success">success</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <nav>
+                            <a href="#">+ Add User</a>
+                            <a href="#">User Preferences</a>
+                            <a href="#">Settings</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="hidden-sm col-md-8">
+                                <div id="search">
+                                <input type="submit" value="" class="hidden-xs">
+                                <input type="search"  class="hidden-xs">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4" id="profile">
+                                <div class="avatar">
+                                    <img src="images/ava.jpg" width="40" alt="">
+                                    <span>3</span>
+                                </div>
+                                <div class="description">Yagami Raito <span class="caret"></span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="row green-bg">
+                    <div class="col-sm-2 col-md-1">
+                        <nav>
+                            <li><a href="#" class="active" ><img src="images/dash.png" width="30"></a></li>
+                            <li><a href="#"><img src="images/profile.png" width="30"></a></li>
+                            <li><a href="#"><img src="images/write.png" width="30"></a></li>
+                            <li><a href="#"><img src="images/calendar.png" width="30"></a></li>
+                            <li><a href="#"><img src="images/note.png" width="30"></a></li>
+                            <li><a href="#"><img src="images/comments.png" width="30"></a></li>
+                            <li><a href="#"><img src="images/graph.png" width="30"></a></li>
+                        </nav>
+                    </div>
+                    <div class="col-sm-10 col-md-11">
+                        <div class="row dashboard">
+                              <div class="col-sm-12 col-md-12">Dashboard</div>
+                        </div>
+                        <div class="row statistic-top">
+                            <div class="col-sm-4 col-md-2 statistic-top-element green-border">
+                                <p>267</p>
+                                <span>Online Players</span>
+                            </div>
+                            <div class="col-sm-4 col-md-2 statistic-top-element blue-border">
+                                <p>1890</p>
+                                <span>Hours Played</span>
+                            </div>
+                            <div class="col-sm-4 col-md-2 statistic-top-element green-border">
+                                <p>22</p>
+                                <span>New Tournaments</span>
+                            </div>
+                            <div class="col-sm-4 col-md-2 statistic-top-element red-border">
+                                <p>16</p>
+                                <span>Lifetime Fails</span>
+                            </div>
+                            <div class="col-sm-4 col-md-2 statistic-top-element green-border">
+                                <p>6544</p>
+                                <span>Comments</span>
+                            </div>
+                            <div class="col-sm-4 col-md-2 statistic-top-element red-border">
+                                <p>568</p>
+                                <span>Gamers Played</span>
+                            </div>
+                        </div>
+                        <div class="row graphics">
+                            <div class="col-md-6">
+                                <div class="row control-elements-middle">
+                                    <div class="col-md-9">Active Players</div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                          <select class="form-control right-element selector-bs" id="sel1">
+                                            <option>Daily</option>
+                                            <option>Monthly</option>
+                                            <option>Yearly</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="graphic-1" style="height: 300px;" ></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row control-elements-middle">
+                                    <div class="col-md-9">Active Tournaments</div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                          <select class="form-control right-element selector-bs" id="sel1">
+                                            <option>Daily</option>
+                                            <option>Monthly</option>
+                                            <option>Yearly</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  id="graphic-2" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <div class="row statistic-bottom">
+                            <div class="hidden-sm col-md-6">
+                                <div class="row control-elements">
+                                    <div class="col-md-9">Recent Players</div>
+                                    <div class="col-md-3">
+                                        <div class="btn-group right-element">
+                                        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                                        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  wrapper-profs">
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  wrapper-profs">
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  wrapper-profs">
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 player-profile">
+                                        <div class="avatar"><img src="images/ava.jpg" width="50" alt=""></div>
+                                        <div class="nickname">
+                                            <p><a href="#">Yagami Raito</a></p>
+                                            <span>United Kingdom</span>
+                                        </div>
+                                    </div>
+                                </div>                    </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="row control-elements">
+                                    <div class="col-md-9">Player Statistics</div>
+                                    <div class="col-md-3">
+                                        <div class="btn-group right-element">
+                                        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                                        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 graph-pie" style="padding: 0;">
+                                    <div id="pie-1" style="width: 125px;height:150px"></div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 graph-pie" style="padding: 0;">
+                                    <div id="pie-2" style="width: 125px;height:150px"></div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 graph-pie" style="padding: 0;">
+                                    <div id="pie-3" style="width: 125px;height:150px"></div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 graph-pie" style="padding: 0;">
+                                    <div id="pie-4" style="width: 125px;height:150px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
             </div>
-		</section>
-		<section class="section settings">
-			 <div class="settings">
-			 <h3>Options</h3>
-			<div class="datagrid_z">
-			<li>Name</li>
-			<li>Interface</li>
-			<li>Default</li>
-			<li>Description</li>
-			</div>
-                <div class="datagrid mCustomScrollbar" data-mcs-theme="dark" >
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>trigger-on</td>
-                            <td>tooltips</br>popovers</br>modals</td>
-                            <td>'mouseover'/'click'/'click'</td>
-                            <td>Event includes an interface
-                            Possible settings:</br>
-                            jQuery Events</br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>trigger-off</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>'mouseleave'/'click'</td>
-                            <td>The event is switched off Interface
-                            Possible settings:</br>
-                            jQuery Events</br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>shift</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>10</td>
-                            <td>The number of pixels to indent the element using tooltip/popover</td>
-                        </tr>
-                        <tr>
-                            <td>content</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>'Enter the text'</td>
-                            <td>Content interface</td>
-                        </tr>
-                        <tr>
-                            <td>title</td>
-                            <td>popovers</td>
-                            <td>'none'</td>
-                            <td>Title interface.If in popover this setting state 'none',block title disappears</td>
-                        </tr>
-                         <tr>
-                            <td>position</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>'top'</td>
-                            <td>The installation position of the element.</br>Possible settings:</br>
-                            'top'</br>
-                            'top-left'</br>
-                            'top-right'</br>
-                            'right'</br>
-                            'right-top'</br>
-                            'right-bottom'</br>
-                            'bottom'</br>
-                            'bottom-right'</br>
-                            'bottom-left'</br>
-                            'left'</br>
-                            'left-top'</br>
-                            'left-bottom'</br>
-                            </td>
-                        </tr>
-                         <tr>
-                            <td>theme</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>'black'</td>
-                            <td>Possible themes:</br>
-                            'black'</br>
-                            'smoke'</br>
-                            'white'</br>
-                            'error'</br>
-                            'success'</br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>radius</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>'3px'</td>
-                            <td>Setting range Interface</td>
-                        </tr>
-                        <tr>
-                            <td>delay</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>100</td>
-                            <td>Delay before vanishing</td>
-                        </tr>
-                        <tr>
-                            <td>fadeIn</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>150</td>
-                            <td>Setting the rate of appearance</td>
-                        </tr>
-                        <tr>
-                            <td>fadeOut</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>150</td>
-                            <td>The speed setting disappearance</td>
-                        </tr>
-                        <tr>
-                            <td>codeRemove</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>'on'</td>
-                            <td>Remove interface from HTML-code</td>
-                        </tr>
-                        <tr>
-                            <td>setClass</td>
-                            <td>tooltips</br>popovers</td>
-                            <td>undefined</td>
-                            <td>Installing a CSS-class uses an interface element</td>
-                        </tr>
-                        <tr>
-                            <td>background</td>
-                            <td>modal</td>
-                            <td>'#fff'</td>
-                            <td>Background window</td>
-                        </tr>
-                        <tr>
-                            <td>height</td>
-                            <td>modal</td>
-                            <td>'300'</td>
-                            <td>Height of the window</td>
-                        </tr>
-                        <tr>
-                            <td>width</td>
-                            <td>modal</td>
-                            <td>'500'</td>
-                            <td>Width of the window</td>
-                        </tr>
-                        <tr>
-                            <td>fadeIn-modal/fadeOut-modal</td>
-                            <td>modal</td>
-                            <td>100</td>
-                            <td>Setting the rate of appearance/disappearance window</td>
-                        </tr>
-                        <tr>
-                            <td>fadeIn-bg/fadeOut-bg</td>
-                            <td>modal</td>
-                            <td>300</td>
-                            <td>Setting the rate of appearance/disappearance background</td>
-                        </tr>
-                      </tbody>
-                    </table>            
-                </div>
-            </div>
-			
-			
-			
-		</section>
-		<section class="section downloads">
-			<div class="logo_bottom">iml</div>
-            <h4>Interface-Micro-Library</br>
-Developed under the MIT license <a href="http://opensource.org/licenses/MIT" target="_blank">http://opensource.org/licenses/MIT</a>
-</h4>
-        <div class="butt-d"><a href="https://github.com/NikitaMusikhin/interface-micro-library" target="_blank" >Download on GitHub</a></div>
-        <div class="report"><a href="https://github.com/NikitaMusikhin/interface-micro-library/issues" target="_blank">Issues</a></div>
-        <div id="social">
-            <a href="https://github.com/NikitaMusikhin/interface-micro-library" target="_blank"><img src="img/gh.png" alt="" data-interface="tooltip" data-content="My profile on GitHub" data-shift="15" height="26" ></a>
-            <a href="https://twitter.com/NikitaWebDev" target="_blank"><img src="img/twi.png" alt="" data-interface="tooltip" data-content="My profile on Twitter" data-shift="15" height="26"></a>
-        </div>   
-		</section>
-	</div>
-        <div  class="modal" data-modal="MyModal2">
-            <div class="modal_title">Header title</div>
-            <div class="modal_content2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-            <div class="close"><img src="img/close.png" alt=""></div>
         </div>
+    </div>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="js/dependencies/underscore.js"></script>
+<script src="js/dependencies/backbone.js"></script>
 </body>
 </html>
