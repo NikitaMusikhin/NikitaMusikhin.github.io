@@ -281,7 +281,6 @@ $(function () {
         title: {
             text: ''
         },
-
         xAxis: {
             lineColor:'#D4D1CD',
             tickColor:'#D4D1CD',
@@ -306,7 +305,8 @@ $(function () {
         },
         plotOptions: {
             area: {
-                fillOpacity: 0.085
+                fillOpacity: 0.085,
+                cursor: 'pointer'
             }
         },
         credits: {
@@ -369,7 +369,8 @@ $(function () {
         },
         plotOptions: {
             area: {
-                fillOpacity: 0.085
+                fillOpacity: 0.085,
+				cursor: 'pointer'
             }
         },
         credits: {
