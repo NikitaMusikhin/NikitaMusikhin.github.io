@@ -5,6 +5,22 @@
     <title>DashBoard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/dependencies/jquery-2.1.4.min.js"></script>
+    <script src="js/graphics.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            var url = window.location.href;
+            $('.green-bg nav li a').each(function(){
+                url === this.href?$(this).addClass('active'):$(this).removeClass('active');
+            });
+            $('.green-bg nav li a').click(function(){
+                $('.green-bg nav li a').each(function(){
+                    $(this).removeClass('active');
+                });
+                $(this).addClass('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -226,22 +242,6 @@
             </div>
         </div>
     </div>
-<script src="js/dependencies/jquery-2.1.4.min.js"></script>
-<script src="js/graphics.js" charset="utf-8"></script>
-<script>
-    $(document).ready(function(){
-        var url = window.location.href;
-        $('.green-bg nav li a').each(function(){
-            url === this.href?$(this).addClass('active'):$(this).removeClass('active');
-        });
-        $('.green-bg nav li a').click(function(){
-            $('.green-bg nav li a').each(function(){
-                $(this).removeClass('active');
-            });
-            $(this).addClass('active');
-        });
-    });
-</script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 </body>
 </html>
