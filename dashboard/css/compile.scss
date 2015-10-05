@@ -271,6 +271,7 @@ only screen and (max-device-width : 820px){
         margin-top:10px;
     }
     .active:after {
+        display: none;
         content: '';
         position: absolute;
         left:92%;
