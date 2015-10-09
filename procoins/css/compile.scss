@@ -1744,9 +1744,13 @@ color:#FFFFFF;
         nav{
             padding:45px 0;
             a{
-                padding: 20px 25px;
+                padding: 10px 20px;
                 color:#fff;
                 text-decoration: none;
+            }
+            a:hover{
+                border-radius: 25px;
+                background-color: #E5693B;
             }
         }
     }
@@ -1803,6 +1807,18 @@ color:#FFFFFF;
                     p{
                        margin: 15px 40px 15px 40px;
                     }
+
+                }
+                .button:hover{
+                color:#fff;
+                background: #f68747; /* Old browsers */
+                background: -moz-linear-gradient(left,  #f68747 0%, #f37248 50%, #ef5b4a 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f68747), color-stop(50%,#f37248), color-stop(100%,#ef5b4a)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* IE10+ */
+                background: linear-gradient(to right,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68747', endColorstr='#ef5b4a',GradientType=1 ); /* IE6-9 */
 
                 }
                 a{
@@ -1875,7 +1891,18 @@ color:#FFFFFF;
         #index-phone-1{
             position: absolute;
             left:30px;
-            bottom:90px;
+            bottom:43%;
+        }
+        #index-phone-2{
+            position: absolute;
+            left:30px;
+            bottom:35%;
+
+        }
+        #index-phone-3{
+            position: absolute;
+            left:150px;
+            bottom:30%;
         }
         .phones{
             padding-top:210px;
@@ -1908,6 +1935,19 @@ color:#FFFFFF;
                         p{
                            margin: 15px 40px 15px 40px;
                         }
+
+                    }
+
+                    .button:hover{
+                    color:#fff;
+                    background: #f68747; /* Old browsers */
+                    background: -moz-linear-gradient(left,  #f68747 0%, #f37248 50%, #ef5b4a 100%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f68747), color-stop(50%,#f37248), color-stop(100%,#ef5b4a)); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(left,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(left,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* Opera 11.10+ */
+                    background: -ms-linear-gradient(left,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* IE10+ */
+                    background: linear-gradient(to right,  #f68747 0%,#f37248 50%,#ef5b4a 100%); /* W3C */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68747', endColorstr='#ef5b4a',GradientType=1 ); /* IE6-9 */
 
                     }
                     a{
@@ -2098,7 +2138,7 @@ footer{
 .slider {
 	position: relative;
 	width: 100%;
-	    height: 720px;
+	    height: 830px;
 	overflow: hidden;
     li{
     	list-style-type: none;
