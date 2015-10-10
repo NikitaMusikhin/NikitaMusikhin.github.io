@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(238, 238, 238);
+}
+.unit{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.left-nav{
+    padding: 0px 15px;
+}
+.left-nav li{
+    list-style-type: none;
+    border:1px solid #000;
+    margin-top:15px;
+    border-radius: 4px;
+}
+.left-nav li a{
+    color:#000;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+#members-page h3{
+    margin-top:0;
+}
+.member{
+    padding-top:20px;
+}
+.cancel,.delete-album,.delete-member,.delete-new{
+    margin-top:5px;
+}

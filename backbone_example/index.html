@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beatles Fan-Site Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-nav">
+                <nav>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#members">Members</a></li>
+                    <li><a href="#albums">Albums</a></li>
+                </nav>
+            </div>
+            <div class="col-md-10 unit" id="main-page">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Краткое описание</th>
+                            <th>Полное описание</th>
+                        </tr>
+                        <tr>
+                        <td><input type="text" class="form-control title-news-input"></td>
+                        <td><input type="text" class="form-control desc-news-input"></td>
+                        <td style="min-width: 300px;"><textarea type="text" class="form-control full-desc-input"></textarea></td>
+                        <td><button type="button" name="button" class="btn btn-primary add-new">Добавить</button></td>
+                        </tr>
+                    </thead>
+                    <tbody class="news-list">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-10 unit" id="members-page">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Фотография</th>
+                        <th>Имя/Фамилия</th>
+                        <th>Годы жизни</th>
+                        <th>Описание</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control photo-input"></td>
+                        <td><input type="text" class="form-control name-input"></td>
+                        <td><input type="text" class="form-control yol-input"></td>
+                        <td><textarea type="text" class="form-control desc-input"></textarea></td>
+                        <td><button type="button" name="button" class="btn btn-primary add-member">Добавить</button></td>
+                    </tr>
+                    </thead>
+                    <tbody class="members-list">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-10 unit" id="albums-page">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Обложка</th>
+                            <th>Название</th>
+                            <th>Дата Выхода</th>
+                            <th>Описание</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                    <td><input type="text" class="form-control cover-input"></td>
+                    <td><input type="text" class="form-control title-input"></td>
+                    <td><input type="text" class="form-control date-input"></td>
+                    <td><textarea type="text" class="form-control description-input"></textarea></td>
+                    <td><button type="button" name="button" class="btn btn-primary add-album">Добавить</button></td>
+                    </tr>
+                    </thead>
+                    <tbody class="albums-list">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script type="text/template" class="beatles-member">
+    <td><span class="photo"><img src="<%= photoPath %>" alt="photo"  class="img-thumbnail" ></span></td>
+    <td><span class="name"><%= name %></span></td>
+    <td><span class="yol"><%= yol %></span></td>
+    <td style="max-width: 400px;"><span class="description"><%= description %></span></td>
+
+    <td><button class="btn btn-warning edit-member">Редактировать</button>
+        <button class="btn btn-danger delete-member">Удалить</button>
+        <button class="btn btn-success update-member" style="display:none">Сохранить</button>
+        <button class="btn btn-danger cancel" style="display:none">Отменить</button>
+    </td>
+</script>
+<script type="text/template" class="beatles-album">
+    <td><span class="cover"><img src="<%= coverPath %>" alt="cover" width="150" class="img-thumbnail" ></span></td>
+    <td><span class="title"><%= title %></span></td>
+    <td><span class="date"><%= date %></span></td>
+    <td><span class="description"><%= description %></span></td>
+    <td><button class="btn btn-warning edit-album">Редактировать</button>
+        <button class="btn btn-danger delete-album">Удалить</button>
+        <button class="btn btn-success update-album" style="display:none">Сохранить</button>
+        <button class="btn btn-danger cancel" style="display:none">Отменить</button>
+    </td>
+</script>
+<script type="text/template" class="beatles-new">
+    <td><span class="title-new"><%= title %></span></td>
+    <td><span class="description-new"><%= description %></span></td>
+    <td><span class="full-new"><%= fullNew %></span></td>
+    <td><button class="btn btn-warning edit-new">Редактировать</button>
+        <button class="btn btn-danger delete-new">Удалить</button>
+        <button class="btn btn-success update-new" style="display:none">Сохранить</button>
+        <button class="btn btn-danger cancel" style="display:none">Отменить</button>
+    </td>
+</script>
+
+<script src="js/assets/jquery-2.1.4.js" charset="utf-8"></script>
+<script src="js/assets/underscore.js" charset="utf-8"></script>
+<script src="js/assets/backbone.js" charset="utf-8"></script>
+<script src="js/models/appModel.js" charset="utf-8"></script>
+<script src="js/collections/appCollections.js" charset="utf-8"></script>
+<script src="js/views/albumView.js" charset="utf-8"></script>
+<script src="js/views/memberView.js" charset="utf-8"></script>
+<script src="js/views/newView.js" charset="utf-8"></script>
+<script src="js/views/appView.js" charset="utf-8"></script>
+<script src="js/router.js" charset="utf-8"></script>
+<script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>
