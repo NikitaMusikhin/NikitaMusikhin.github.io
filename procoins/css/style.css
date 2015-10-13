@@ -55,7 +55,7 @@ only screen and (max-device-width : 480px){
     height:650px;
   }
     .bottom-menu{
-        font-size: 20px;
+        font-size: 30px;
     }
   .middle .content{
     padding-top: 50px;
@@ -77,9 +77,13 @@ only screen and (max-device-width : 480px){
     width:100%;
     margin: auto;
   }
+    .middle .block-2 .phones .phones-element .phone img{
+    width:400px;
+    }
   .middle .block-2 .phones .phones-element .phone span {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+    padding-top:5px;
     background: #f68747;
     background: -moz-linear-gradient(left, #f68747 0%, #f37248 50%, #ef5b4a 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f68747), color-stop(50%, #f37248), color-stop(100%, #ef5b4a));
@@ -93,7 +97,7 @@ only screen and (max-device-width : 480px){
     font-family: Adelle;
     position: absolute;
     top: -12px;
-    left: 33%;
+    left: 25%;
     border-radius: 50%;}
 
   .top-2{
