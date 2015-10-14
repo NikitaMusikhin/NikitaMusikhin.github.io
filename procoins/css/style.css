@@ -20,7 +20,7 @@ only screen and (max-device-width : 480px){
     display: block;
   }
     header .logo span{
-    font-size:30px;
+    font-size:40px;
     }
   .slider{
     height:100%;
@@ -39,11 +39,14 @@ only screen and (max-device-width : 480px){
 
   }
     h2,h1{
-    font-size: 50px;
+    font-size: 60px;
     }
+    .middle .content .form-feedback input[type=text]{font-size: 25px;}
+    .middle .content .form-feedback textarea{font-size: 25px;}
     h6{
-        font-size: 26px;
+        font-size: 30px;
     }
+    .middle .content .form-feedback .writebutton{font-size: 25px;}
   .middle .block-2 .phones .phones-element {
     padding-top: 60px;
     display: block;
@@ -60,6 +63,10 @@ only screen and (max-device-width : 480px){
   .middle .content{
     padding-top: 50px;
   }
+    .middle .content p{
+        font-size:30px;
+    }
+    
   .middle .block-2 .phones .phones-element{
     padding-top:60px;
   }
@@ -77,6 +84,9 @@ only screen and (max-device-width : 480px){
     width:100%;
     margin: auto;
   }
+    .logo img{
+        width:90px;
+    }
     .middle .block-2 .phones .phones-element .phone img{
     width:500px;
     }
@@ -96,8 +106,8 @@ only screen and (max-device-width : 480px){
     font-size: 42px;
     font-family: Adelle;
     position: absolute;
-    top: -12px;
-    left: 25%;
+       top: -10px;
+    left: 20%;
     border-radius: 50%;}
 
   .top-2{
