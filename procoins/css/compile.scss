@@ -1775,8 +1775,7 @@ color:#FFFFFF;
         position: relative;
         img{
             position: absolute;
-            top:33px;
-            right:0;
+            top:33px;display:inline-block;
         }
         .description-middle{
             margin-top: 200px;
@@ -1835,12 +1834,12 @@ color:#FFFFFF;
         #phone-bott{
             position: absolute;
             bottom:0;
-            left:15px;
+
         }
         #app-code{
-            position: absolute;
-            bottom:60px;
-            right:30px;
+            //position: absolute;
+            //bottom:60px;
+            float:right;
         }
         #logo-bottom{
             width:325px;
@@ -2341,3 +2340,6 @@ only screen and (max-device-width : 480px){
     padding-top:100px;
   }
 }
+.phones-desc{width:1275px;margin:0 auto;}.phones-desc-2{width:1275px;margin:0 auto;}
+.phones-desc .description-middle{margin-right:280px;display:inline-block;}
+.middle .block-3 .description-middle{margin-top:120px;}
