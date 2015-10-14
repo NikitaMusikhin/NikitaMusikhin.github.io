@@ -2327,16 +2327,16 @@ only screen and (max-device-width : 480px){
   }
     header .description-top .buttons .button,.app-button{
     padding-bottom:65px;
-    }
+}.middle .block-4 #logo-bottom .buttons .button{height:55px;}
     header .description-top p{
         font-size: 40px;
-    }
+    }.middle .block-2 .phones .description-middle .buttons .button p{margin: 18px 40px 15px 50px;}
   .middle .block-3 .description-middle .buttons .button p{
-    font-size: 16px;
-  }
+    font-size: 16px;margin: 18px 40px 15px 50px;
+}.middle .block-3 .description-middle .buttons .button{width:170px;height:60px;}
   .middle .block-4 #logo-bottom{
     margin-top:100px;
-  }
+}.middle .block-2 .phones .description-middle .buttons .button{width:170px;height:60px;}
   .middle .block-4 #logo-bottom #logotype{
     padding-top:100px;
   }
