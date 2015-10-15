@@ -2325,10 +2325,15 @@ only screen and (max-device-width : 480px){
   }
   .block-3 p{
     font-size: 40px;
-  }
+}.middle .block-4 #app-code {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;}.middle .block-4 #logo-bottom{width:325px;}.middle .block-4 #logo-bottom .buttons .button{width:210px;height:80px;}.middle .block-4 #logo-bottom .buttons .button img{height:70px;}
     header .description-top .buttons .button,.app-button{
     padding-bottom:65px;
-}.middle .block-4 #logo-bottom .buttons .button{height:55px;}
+}.middle .block-4 #logo-bottom .buttons {
+    margin: 0 auto;
+    width: 210px;}.middle .block-4 #logo-bottom .buttons .button{height:70px;}
     header .description-top p{
         font-size: 40px;
     }.middle .block-2 .phones .description-middle .buttons .button p{margin: 18px 40px 15px 50px;}
