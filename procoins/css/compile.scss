@@ -2319,7 +2319,16 @@ only screen and (max-device-width : 480px){.middle .content .form-feedback input
 .bottom-type{display:none;}
   .top-2{
     display: none;
-  }
+} .header-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9983e+0,f9993e+25,fbb465+100 */
+background: #f9983e; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #f9983e 0%, #f9993e 25%, #fbb465 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f9983e), color-stop(25%,#f9993e), color-stop(100%,#fbb465)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* IE10+ */
+background: linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', endColorstr='#fbb465',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
   .top-1 a{
     font-size: 40px;
   }
