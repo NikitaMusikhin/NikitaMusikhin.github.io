@@ -1842,7 +1842,7 @@ color:#FFFFFF;
             float:right;
         }
         #logo-bottom{
-            width:325px;
+            width:330px;
             margin:210px auto 0 auto;
             #logotype{
                 padding: 0 78px;
@@ -1886,18 +1886,18 @@ color:#FFFFFF;
         #index-phone-1{
             position: absolute;
             left:30px;
-            bottom:43%;
+            bottom:10%;
         }
         #index-phone-2{
             position: absolute;
             left:30px;
-            bottom:35%;
+            bottom:10%;
 
         }
         #index-phone-3{
             position: absolute;
             left:150px;
-            bottom:30%;
+            bottom:10%;
         }
         .phones{
             //padding-top:210px;
@@ -1906,7 +1906,7 @@ color:#FFFFFF;
             .description-middle{
                 text-align: left;
                 margin-top: 160px;
-                left:52%;
+                left:25%;
                 margin-bottom: 190px;
                 position: relative;
                 z-index: 8;
@@ -2181,7 +2181,7 @@ footer{
 				.slider-nav__item:hover { background:#6A6A6C; }
 				.slider-nav__item--current { background: #6A6A6C; }
                 .phones-desc{width:1275px;margin:0 auto;}.phones-desc-2{width:1275px;margin:0 auto;}
-                .phones-desc .description-middle{margin-right:380px;display:inline-block;}
+                .phones-desc .description-middle{margin-right:380px;display:inline-block;}.phones-descs .description-middle{display:inline-block;}.phones-descs{width:1275px;margin:0 auto;}
                 .middle .block-3 .description-middle{margin-top:120px;}
 
 @media only screen and (max-width : 1300px),
@@ -2353,8 +2353,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', end
 }.middle .block-3 .description-middle .buttons .button{width:210px;height:80px;}
   .middle .block-4 #logo-bottom{
     margin-top:100px;
-}.middle .block-2 .phones .description-middle .buttons .button{width:210px;height:80px;font-size:26px;}
+}.middle .block-2 .phones .description-middle .buttons .button{width:210px;height:80px;font-size:26px;}.middle .block-2 .phones .description-middle{position:static;}.middle .block-2 .phones .phones-element .desc{height:100%;}
   .middle .block-4 #logo-bottom #logotype{
     padding-top:100px;
-}.phones-desc{width:100%;margin:0 auto;}.phones-desc .description-middle{margin-right:0;display:inline-block;}
+}.phones-desc{width:100%;margin:0 auto;}.phones-descs{width:100%;margin:0 auto;}.phones-desc .description-middle{margin-right:0;display:inline-block;}
 .phones-desc-2{width:100%;margin:0 auto;}}
