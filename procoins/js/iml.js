@@ -71,9 +71,6 @@ Developed under the MIT license http://opensource.org/licenses/MIT
             'width':this.width,
             'height':this.height
         });
-        $('body').css({
-          'overflow': 'hidden'
-        });
         $('#background').css({
             'width':'100%',
             'height': '100%'
@@ -82,6 +79,9 @@ Developed under the MIT license http://opensource.org/licenses/MIT
     }
 
     Modal.prototype.start = function(target,obj){
+      $('body').css({
+        'overflow': 'hidden'
+      });
         this.bb.appendTo('body');
         this.stayPosition();
         this.showModal();
