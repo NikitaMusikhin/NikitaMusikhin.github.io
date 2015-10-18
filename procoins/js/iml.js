@@ -52,6 +52,9 @@ Developed under the MIT license http://opensource.org/licenses/MIT
 
 
     Modal.prototype.hideModal = function(){
+      $('body').css({
+        'overflow': 'auto'
+      });
         $(this.element).fadeOut(this.fOut_modal);
 		$(this.element).children('.close').html('');
         this.bb.fadeOut(this.fOut_bg,function(){$(this).remove();});
@@ -68,7 +71,9 @@ Developed under the MIT license http://opensource.org/licenses/MIT
             'width':this.width,
             'height':this.height
         });
-
+        $('body').css({
+          'overflow': 'hidden'
+        });
         $('#background').css({
             'width':'100%',
             'height': '100%'
