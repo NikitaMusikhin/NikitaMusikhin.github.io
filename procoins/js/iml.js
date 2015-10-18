@@ -14,7 +14,6 @@ Developed under the MIT license http://opensource.org/licenses/MIT
         this.fIn_modal = parseInt(target.attr('data-fadeIn-modal')) || 100;
         this.background = target.attr('data-background') || '#fff';
         this.width = parseFloat(target.attr('data-width')) || '550';
-        this.height = parseFloat(target.attr('data-height')) || '300';
         this.trigger_on = target.attr('data-trigger-on')|| "click";
         this.winWidth = $(window).width();
         this.topMargin = $(window).scrollTop();
@@ -68,8 +67,7 @@ Developed under the MIT license http://opensource.org/licenses/MIT
         $(this.element).css({
             'top':stayTop+'px',
             'left':stayLeft+'px',
-            'width':this.width,
-            'height':this.height
+            'width':this.width
         });
         $('#background').css({
             'width':'100%',

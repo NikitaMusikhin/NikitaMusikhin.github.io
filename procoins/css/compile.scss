@@ -2177,6 +2177,19 @@ footer{
 		   background-color: #C2C5C7;
 		   opacity: .5;
 		}
+.links_modal{
+  display: block;
+  margin-top:35px;
+  a{
+    color:#7A869B;
+    padding: 0 15px;
+    text-decoration: none;
+  }
+  a:first-child{
+    border-right:1px solid #EEF4F6;
+    padding: 0 15px;
+  }
+}
 
 				.slider-nav__item:hover { background:#6A6A6C; }
 				.slider-nav__item--current { background: #6A6A6C; }
