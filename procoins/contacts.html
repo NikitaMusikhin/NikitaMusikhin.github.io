@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Contacts</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/iml-styles.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -25,8 +26,8 @@
                 </div>
                 <div class="hidden-xs col-md-2 col-lg-offset-0 col-lg-3 col-md-offset-1 top-2">
                     <nav>
-                        <a href="#">Sign in</a>
-                        <a href="#">Sign up</a>
+                      <a href="#" class="link1"  data-interface="modal" data-width="550px">Sign in</a>
+                      <a href="#" class="link2" data-interface="modal" data-width="550px">Sign up</a>
                     </nav>
                 </div>
             </div></div>
@@ -116,6 +117,38 @@
                 </div>
             </div></div>
         </footer>
+        <div  class="modal" data-modal="MyModal1" >
+            <div class="form_header">Регистрация</div>
+            <div class="modal_content">
+              <form action="#" class="reg">
+              <input type="text" placeholder="Логин">
+              <input type="password" placeholder="Пароль"><input type="password" placeholder="Повторите пароль">
+              <input type="button" name="name" class="writebutton" value="Регистрация">
+              </form>
+          </div>
+        </div>
+        <div  class="modal" data-modal="MyModal2">
+          <div class="form_header" style="left: 227px;">Вход</div>
+          <div class="modal_content">
+              <form action="#" class="reg">
+                <input type="text" placeholder="Логин">
+                <input type="password" placeholder="Пароль">
+                <input type="button" name="name" class="writebutton" value="Войти" style="margin-left:0px;float:right;padding:15px 25px;background-color:#5E6472;">
+                <div class="links_modal">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Регистрация</a>
+                </div>
+                </form>
+          </div>
+        </div>
 </div>
+<script type="text/javascript" src="js/jquery.glide.js"></script>
+<script src="js/iml.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.link1').modal("[data-modal='MyModal1']");
+  $('.link2').modal("[data-modal='MyModal2']");
+});
+</script>
 </body>
 </html>

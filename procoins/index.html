@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>ProCoins</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/iml-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/iml-styles.css">
 	<style>
     *{ margin: 0; padding: 0; border: 0; }
 	.box {
@@ -34,8 +35,8 @@
                 </div>
                 <div class="hidden-xs col-md-2 col-lg-offset-0 col-lg-3 col-md-offset-1 top-2">
                     <nav>
-                        <a href="#" id="link1"  data-interface="modal" data-width="550px">Sign in</a>
-                        <a href="#" id="link2" data-interface="modal" data-width="550px">Sign up</a>
+                        <a href="#" class="link1"  data-interface="modal" data-width="550px">Sign in</a>
+                        <a href="#" class="link2" data-interface="modal" data-width="550px">Sign up</a>
                     </nav>
                 </div>
             </div></div>
@@ -52,6 +53,8 @@ Lorem</p>
                         <a href="#"><div class="app-button">
                             <img src="images/app.png" alt="apple">
                         </div></a>
+                        <img src="images/arrow.jpg" alt="arrow" id="arrow" style="float: right;
+    margin-right: 25px;">
                     </div>
                 </div></div>
             </div>
@@ -217,7 +220,8 @@ Lorem</p>
   </div>
 </div>
 </div>
-<script type="text/javascript" src="js/jquery.glide.js"></script><script src="js/iml.js"></script>
+<script type="text/javascript" src="js/jquery.glide.js"></script>
+<script src="js/iml.js"></script>
 <script type="text/javascript">
 	var glide = $('.slider').glide().data('api_glide');
 		$(window).on('keyup', function (key) {
@@ -227,9 +231,11 @@ Lorem</p>
 		});
 		$('.slider-arrow').on('click', function() {
 			console.log(glide.current());
-		});$(document).ready(function(){
-    $('#link1').modal("[data-modal='MyModal1']");
-    $('#link2').modal("[data-modal='MyModal2']");
+		});
+
+  $(document).ready(function(){
+    $('.link1').modal("[data-modal='MyModal1']");
+    $('.link2').modal("[data-modal='MyModal2']");
   });
 </script>
 </body>
