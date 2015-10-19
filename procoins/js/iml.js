@@ -1,6 +1,6 @@
 /*
 IML v1.0.0 | 2015-09-06
-Сustom tooltip/popover/modal jQuery plugin
+Сustom modal jQuery plugin
 Developed under the MIT license http://opensource.org/licenses/MIT
 */
 +function($){
@@ -43,7 +43,6 @@ Developed under the MIT license http://opensource.org/licenses/MIT
 
     Modal.prototype.showModal = function(){
         $(this.element).css({'background-color':this.background});
-	$(this.element).children('.close').append('&times;');
         $(this.element).fadeIn(this.fIn_modal);
         this.bb.fadeIn(this.fIn_bg);
         this.scrollStop();
@@ -51,12 +50,11 @@ Developed under the MIT license http://opensource.org/licenses/MIT
 
 
     Modal.prototype.hideModal = function(){
-      $('body').css({
-        'overflow': 'auto'
-      });
         $(this.element).fadeOut(this.fOut_modal);
 		$(this.element).children('.close').html('');
-        this.bb.fadeOut(this.fOut_bg,function(){$(this).remove();});
+        this.bb.fadeOut(this.fOut_bg,function(){$(this).remove();});$('body').css({
+          'overflow': 'visible'
+        });
         this.scrollStart();
     }
     Modal.prototype.stayPosition = function(){
@@ -71,15 +69,15 @@ Developed under the MIT license http://opensource.org/licenses/MIT
         });
         $('#background').css({
             'width':'100%',
-            'height': '100%'
+            'height': document.body.offsetHeight
         });
 
     }
 
     Modal.prototype.start = function(target,obj){
-      $('body').css({
-        'overflow': 'hidden'
-      });
+     // $('body').css({
+    //    'overflow': 'hidden'
+     // });
         this.bb.appendTo('body');
         this.stayPosition();
         this.showModal();
