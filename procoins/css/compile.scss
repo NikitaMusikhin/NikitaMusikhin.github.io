@@ -1802,11 +1802,12 @@ color:#FFFFFF;
                     border:1px solid #FBB383;
                     p{
                        margin: 15px 40px 15px 40px;
+                       color: #F5603A;
                     }
 
                 }
                 .button:hover{
-                color:#fff;
+                color: #F5603A;
                 background: #f68747; /* Old browsers */
                 background: -moz-linear-gradient(left,  #f68747 0%, #f37248 50%, #ef5b4a 100%); /* FF3.6+ */
                 background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f68747), color-stop(50%,#f37248), color-stop(100%,#ef5b4a)); /* Chrome,Safari4+ */
@@ -1929,13 +1930,15 @@ color:#FFFFFF;
 
                         border:1px solid #FBB383;
                         p{
+                          color: #F5603A;
                            margin: 15px 40px 15px 40px;
+
                         }
 
                     }
 
                     .button:hover{
-                    color:#fff;
+                    color: #F5603A;
                     background: #f68747; /* Old browsers */
                     background: -moz-linear-gradient(left,  #f68747 0%, #f37248 50%, #ef5b4a 100%); /* FF3.6+ */
                     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f68747), color-stop(50%,#f37248), color-stop(100%,#ef5b4a)); /* Chrome,Safari4+ */
@@ -2243,9 +2246,53 @@ only screen and (max-device-width : 1300px){
 }
 @media only screen and (max-width : 800px),
 only screen and (max-device-width : 800px){
+.phones-descs  .two-phones {
+    position: absolute;
+    z-index: 333;
+    top: -900px;
+    right: 30px;
+}
+.middle .block-2 .phones .phones-element {
+    padding-top: 60px;}
+header .description-top {
+    margin-top: 150px;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    width: 48%;
+    overflow: hidden;
+}
+.middle .block-2 .phones .description-middle {
+    text-align: left;
+    margin-top: 20px;}
 .middle .content .form-feedback .writebutton{
   font-size: 20px;
 }
+.middle .block-2 .phones .description-middle .buttons .button{
+  height: 65px;
+  width: 185px;
+}
+header .description-top .buttons .button {
+    overflow: hidden;
+    height: 70px;
+    width: 200px;
+  img{
+    width: 200px;
+  }}
+  .middle .block-4 #logo-bottom .buttons .button{
+    overflow: hidden;
+    height: 70px;
+    width: 200px;
+    img{
+      width: 200px;
+    }
+  }
+    header .description-top .buttons .app-button {
+        overflow: hidden;
+        height: 70px;
+        width: 200px;
+        img{
+          width: 200px;
+        }}
   .middle .content .form-feedback input[type=text]{font-size: 22px;}
   .middle .content .form-feedback textarea{font-size: 22px;}
   .header-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9983e+0,f9993e+25,fbb465+100 */
@@ -2280,6 +2327,10 @@ h6, .h6{
 p{
   font-size: 25px;
 }
+.middle .block-2 .phones {
+    text-align: center;
+    padding-bottom: 50px;
+}
 h1, .h1{
   font-size: 50px;
 }
@@ -2307,18 +2358,27 @@ header .top-1 nav a{
     height: 65px;
     width: 185px;
 }
+.middle .block-4 #logo-bottom #logotype {
+    padding: 0 130px;
+}
+.middle .block-4 #logo-bottom p {
+    font-family: Adelle;
+    font-size: 40px;
+    color: #fff;
+    padding: 20px 117px;
+}
 .middle .block-3 img {
     margin-top: 120px;}
 .middle .block-4 #logo-bottom {
-    width: 330px;
+    width: 425px;
     margin: 0px auto 0 auto;
-    padding: 200px 0;
+    padding: 200px 0 0 0;
   }
   .middle .block-3{
     height: 100%;
   }
 .middle .block-2 .phones .phones-element{
-  margin: 0px 25px 50px 25px;
+  margin: 0px 25px 60px 25px;
 }
 .middle .block-2{
   height: 100%;
