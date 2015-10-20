@@ -1648,7 +1648,7 @@ address {
 }
 html,body{
     font-family: 'Helvetica';
-} 
+}
 .header-bg1{
     background-image: url(../images/bgb1.png);
     background-size: cover;
@@ -2241,8 +2241,105 @@ only screen and (max-device-width : 1300px){
         margin: 0 70px;
     }
 }
+@media only screen and (max-width : 800px),
+only screen and (max-device-width : 800px){
+
+  .middle .content .form-feedback input[type=text]{font-size: 22px;}
+  .middle .content .form-feedback textarea{font-size: 22px;}
+  .header-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9983e+0,f9993e+25,fbb465+100 */
+  background: #f9983e; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #f9983e 0%, #f9993e 25%, #fbb465 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f9983e), color-stop(25%,#f9993e), color-stop(100%,#fbb465)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', endColorstr='#fbb465',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  .phones-desc{width:100%;margin:0 auto;}
+  .phones-descs{width:100%;margin:0 auto;}
+  .phones-desc .description-middle{margin-right:180px;display:inline-block;}
+  .phones-desc-2{width:100%;margin:0 auto;}
+  header .description-top{
+    margin-top:50px;
+  }
+  header .block-1::after{
+    display: none;
+  }
+.middle .block-4 #app-code{
+  display: none;
+}
+h2, .h2{
+  font-size: 40px;
+}
+h6, .h6{
+  font-size: 25px;
+}
+p{
+  font-size: 25px;
+}
+h1, .h1{
+  font-size: 50px;
+}
+.middle .block-4 #phone-bott{
+  display: none;
+}
+header .top-1 nav a{
+  font-size: 25px;
+}
+.middle .block-2 .phones .phones-element .desc{
+  font-size: 25px;
+  height: 100%;
+}
+.arrow{
+  display: none;
+}
+.phones-desc-2 .arrow{
+  display: block;
+}
+.middle .block-3 .description-middle {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.middle .block-3 .description-middle .buttons .button {
+    height: 65px;
+    width: 185px;
+}
+.middle .block-3 img {
+    margin-top: 120px;}
+.middle .block-4 #logo-bottom {
+    width: 330px;
+    margin: 0px auto 0 auto;
+    padding: 200px 0;
+  }
+  .middle .block-3{
+    height: 100%;
+  }
+.middle .block-2 .phones .phones-element{
+  margin: 0px 25px 50px 25px;
+}
+.middle .block-2{
+  height: 100%;
+}
+header .top-2 nav a{
+  font-size: 25px;
+}
+footer .subfooter{
+  font-size: 16px;
+}
+footer .bottom-menu div p a{
+  font-size: 20px;
+}
+header .logo span a{
+  font-size: 40px;
+}
+body{
+//  font-size: 23px;
+}
+}
 @media only screen and (max-width : 480px),
-only screen and (max-device-width : 480px){.middle .content .form-feedback input[type=text]{padding:25px 30px;}
+only screen and (max-device-width : 480px){
+  .middle .content .form-feedback input[type=text]{padding:25px 30px;}
   .two-phones{
     display: none;
   }
@@ -2256,9 +2353,10 @@ only screen and (max-device-width : 480px){.middle .content .form-feedback input
     font-size: 40px;
   }
   header .top-1 nav a{
-        padding: 15px 0px;
+    padding: 15px 0px;
     display: block;
-}header .description-top .buttons .button {
+}
+header .description-top .buttons .button {
     overflow: hidden;
     height: 95px;
     width: 260px;
@@ -2267,7 +2365,8 @@ only screen and (max-device-width : 480px){.middle .content .form-feedback input
     border-radius: 4px;
     background-color: #F09B71;
     border: 1px solid #F4B89D;img{    height: 90px;}
-}header .description-top .buttons .app-button {
+}
+header .description-top .buttons .app-button {
     overflow: hidden;
     height: 95px;
     width: 260px;
@@ -2388,27 +2487,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', end
   }
   .block-3 p{
     font-size: 40px;
-}.middle .block-4 #app-code {
+}
+.middle .block-4 #app-code {
     position: absolute;
     right: 30px;
-    bottom: 30px;}.middle .block-4 #logo-bottom{width:325px;}.middle .block-4 #logo-bottom .buttons .button{width:210px;height:80px;}.middle .block-4 #logo-bottom .buttons .button img{height:70px;}
+    bottom: 30px;}.middle .block-4 #logo-bottom{width:325px;}
+    .middle .block-4 #logo-bottom .buttons .button{width:210px;height:80px;}
+    .middle .block-4 #logo-bottom .buttons .button img{height:70px;}
     header .description-top .buttons .button,.app-button{
     padding-bottom:65px;
-}.middle .block-4 #logo-bottom .buttons {
+}
+.middle .block-4 #logo-bottom .buttons {
     margin: 0 auto;
     width: 210px;}.middle .block-4 #logo-bottom .buttons {
     padding-top: 40px;
-}.middle .block-4 #logo-bottom .buttons .button{    margin-top: 10px;height:70px;}
+}
+.middle .block-4 #logo-bottom .buttons .button{    margin-top: 10px;height:70px;}
     header .description-top p{
         font-size: 40px;
-    }.middle .block-2 .phones .description-middle .buttons .button p{margin: 18px 40px 15px 50px;}
-  .middle .block-3 .description-middle .buttons .button p{
+    }
+.middle .block-2 .phones .description-middle .buttons .button p{margin: 18px 40px 15px 50px;}
+.middle .block-3 .description-middle .buttons .button p{
     font-size: 26px;margin: 18px 40px 15px 50px;
-}.middle .block-3 .description-middle .buttons .button{width:210px;height:80px;}
-  .middle .block-4 #logo-bottom{
+}
+.middle .block-3 .description-middle .buttons .button{width:210px;height:80px;}
+.middle .block-4 #logo-bottom{
     margin-top:100px;
-}.middle .block-2 .phones .description-middle .buttons .button{width:210px;height:80px;font-size:26px;}.middle .block-2 .phones .description-middle{position:static;}.middle .block-2 .phones .phones-element .desc{height:100%;}
-  .middle .block-4 #logo-bottom #logotype{
+}
+.middle .block-2 .phones .description-middle .buttons .button{width:210px;height:80px;font-size:26px;}
+.middle .block-2 .phones .description-middle{position:static;}
+.middle .block-2 .phones .phones-element .desc{height:100%;}
+.middle .block-4 #logo-bottom #logotype{
     padding-top:100px;
-}.phones-desc{width:100%;margin:0 auto;}.phones-descs{width:100%;margin:0 auto;}.phones-desc .description-middle{margin-right:0;display:inline-block;}
-.phones-desc-2{width:100%;margin:0 auto;}footer .subfooter{padding:24px;}}
+}
+.phones-desc{width:100%;margin:0 auto;}
+.phones-descs{width:100%;margin:0 auto;}
+.phones-desc .description-middle{margin-right:0;display:inline-block;}
+.phones-desc-2{width:100%;margin:0 auto;}
+footer .subfooter{padding:24px;}
+}
