@@ -2244,6 +2244,167 @@ only screen and (max-device-width : 1300px){
         margin: 0 70px;
     }
 }
+@media only screen and (max-width : 1024px),
+only screen and (max-device-width : 1024px){
+.phones-descs  .two-phones {
+    position: absolute;
+    z-index: 333;
+    top: -640px;
+    right: 30px;
+}
+.middle .block-2 .phones .phones-element {
+    padding-top: 60px;}
+header .description-top {
+    margin-top: 150px;
+    margin-left: 15px;
+    margin-bottom: 75px;
+    width: 48%;
+    overflow: hidden;
+}
+.middle .block-2 .phones .description-middle {
+    text-align: left;
+    margin-top: 20px;}
+.middle .content .form-feedback .writebutton{
+  font-size: 20px;
+}
+.middle .block-2 .phones .description-middle .buttons .button{
+  height: 65px;
+  width: 185px;
+}
+header .description-top .buttons .button {
+    overflow: hidden;
+    height: 70px;
+    width: 200px;
+  img{
+    width: 200px;
+  }}
+  .middle .block-4 #logo-bottom .buttons .button{
+    overflow: hidden;
+    height: 70px;
+    width: 200px;
+    img{
+      width: 200px;
+    }
+  }
+    header .description-top .buttons .app-button {
+        overflow: hidden;
+        height: 70px;
+        width: 200px;
+        img{
+          width: 200px;
+        }}
+  .middle .content .form-feedback input[type=text]{font-size: 22px;}
+  .middle .content .form-feedback textarea{font-size: 22px;}
+  .header-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9983e+0,f9993e+25,fbb465+100 */
+  background: #f9983e; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #f9983e 0%, #f9993e 25%, #fbb465 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f9983e), color-stop(25%,#f9993e), color-stop(100%,#fbb465)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #f9983e 0%,#f9993e 25%,#fbb465 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', endColorstr='#fbb465',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  .phones-desc{width:100%;margin:0 auto;}
+  .phones-descs{width:100%;margin:0 auto;}
+  .phones-desc .description-middle{margin-right:180px;display:inline-block;}
+  .phones-desc-2{width:100%;margin:0 auto;}
+  header .description-top{
+    margin-top:50px;
+  }
+
+.middle .block-4 #app-code{
+  display: none;
+}
+h2, .h2{
+  font-size: 40px;
+}
+h6, .h6{
+  font-size: 25px;
+}
+p{
+  font-size: 25px;
+}
+.middle .block-2 .phones {
+    text-align: center;
+    padding-bottom: 50px;
+}
+h1, .h1{
+  font-size: 50px;
+}
+.middle .block-4 #phone-bott{
+  display: none;
+}
+header .top-1 nav a{
+  font-size: 20px;
+}
+.middle .block-2 .phones .phones-element .desc{
+  font-size: 25px;
+  height: 100%;
+}
+.arrow{
+  display: none;
+}
+.phones-desc-2 .arrow{
+  display: block;
+}
+.middle .block-3 .description-middle {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.middle .block-3 .description-middle .buttons .button {
+    height: 65px;
+    width: 185px;
+}
+.middle .block-4 #logo-bottom #logotype {
+    padding: 0 130px;
+}
+.middle .block-4 #logo-bottom p {
+    font-family: Adelle;
+    font-size: 40px;
+    color: #fff;
+    padding: 20px 117px;
+}
+.middle .block-3 img {
+    margin-top: 120px;}
+.middle .block-4 #logo-bottom {
+    width: 425px;
+    margin: 0px auto 0 auto;
+    padding: 200px 0 0 0;
+  }
+  .middle .block-3{
+    height: 100%;
+  }
+.middle .block-2 .phones .phones-element{
+  margin: 0px 25px 60px 25px;
+}
+.middle .block-2{
+  height: 100%;
+}
+header .top-2 nav a{
+  font-size: 20px;
+}
+footer .subfooter{
+  font-size: 16px;
+}
+footer .bottom-menu div p a{
+  font-size: 20px;
+}
+header .logo span a{
+  font-size: 30px;
+}
+body{
+//  font-size: 23px;
+}
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width : 800px),
 only screen and (max-device-width : 800px){
 .phones-descs  .two-phones {
