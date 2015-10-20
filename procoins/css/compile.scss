@@ -2243,7 +2243,9 @@ only screen and (max-device-width : 1300px){
 }
 @media only screen and (max-width : 800px),
 only screen and (max-device-width : 800px){
-
+.middle .content .form-feedback .writebutton{
+  font-size: 20px;
+}
   .middle .content .form-feedback input[type=text]{font-size: 22px;}
   .middle .content .form-feedback textarea{font-size: 22px;}
   .header-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9983e+0,f9993e+25,fbb465+100 */
