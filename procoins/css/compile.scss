@@ -3138,10 +3138,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', end
         #logotype{
           margin: 0 auto;
           display: block;
+          padding: 0;
         }
         p{
           margin: 0 auto;
           display: block;
+          padding: 20px 85px;
+
         }
 }
 .middle .block-2 .phones .description-middle .buttons .button{width:210px;height:80px;font-size:26px;}
