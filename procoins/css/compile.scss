@@ -2172,7 +2172,9 @@ footer{
 		}
 
 
-
+footer .social a{
+  padding: 0 15px;
+}
 
 	.slider-nav {
 		position: absolute;
@@ -2206,8 +2208,10 @@ footer{
 
 				.slider-nav__item:hover { background:#6A6A6C; }
 				.slider-nav__item--current { background: #6A6A6C; }
-                .phones-desc{width:1275px;margin:0 auto;}.phones-desc-2{width:1275px;margin:0 auto;}
-                .phones-desc .description-middle{margin-right:380px;display:inline-block;}.phones-descs .description-middle{display:inline-block;}.phones-descs{width:1275px;margin:0 auto;}
+                .phones-desc{width:1200px;margin:0 auto;}
+                .phones-desc-2{width:1200px;margin:0 auto;}
+                .phones-desc .description-middle{margin-right:345px;display:inline-block;}
+                .phones-descs .description-middle{display:inline-block;}.phones-descs{width:1200px;margin:0 auto;}
                 .middle .block-3 .description-middle{margin-top:120px;}
 .form_header{    position: absolute;
     top: -100px;
