@@ -3141,9 +3141,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9983e', end
           padding: 0;
         }
         p{
-          margin: 0 auto;
-          display: block;
-          padding: 20px 85px;
+            width: 345px;
+  display: block;
+  margin: 25px auto 0 auto;
+  padding: 20px 85px;
+          
 
         }
 }
