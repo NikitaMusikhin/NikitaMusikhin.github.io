@@ -1711,6 +1711,7 @@ color:#FFFFFF;
         }
     }
 
+
     .block-1::after{
         content: '';
         background: #f1f2f4; /* Old browsers */
@@ -2017,7 +2018,7 @@ color:#FFFFFF;
             a{
                 color:#fff;
                 text-decoration: none;
-                padding: 25px 38px 28px 40px;
+                padding: 25px 35px 28px 35px;
             }
         }
         .twi{
@@ -2068,6 +2069,7 @@ color:#FFFFFF;
                 padding: 15px 30px;
                 margin:30px 0 50px 0;
             }
+
             .writebutton{
                 background-color: #5DC560;
                 color:#fff;
@@ -2246,6 +2248,18 @@ only screen and (max-device-width : 1300px){
 }
 @media only screen and (max-width : 1024px),
 only screen and (max-device-width : 1024px){
+  #index-phone-1,#index-phone-2,#index-phone-3{
+    display: none;
+  }
+  .middle .block-2 .phones .description-middle {
+      text-align: left;
+      margin-top: 160px;
+       left: 0%;
+      position: relative;
+      z-index: 8;
+      width: 93%;
+      overflow: hidden;
+  }
 .phones-descs  .two-phones {
     position: absolute;
     z-index: 333;
@@ -2327,7 +2341,19 @@ p{
 }
 .middle .block-2 .phones {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+}
+.reg input[type=text]{
+  font-size: 16px;
+}
+.reg input[type=password]{
+  font-size: 16px;
+}
+.links_modal a{
+  font-size: 14px;
+}
+.reg .writebutton{
+  font-size: 14px;
 }
 h1, .h1{
   font-size: 50px;
@@ -2358,6 +2384,9 @@ header .top-1 nav a{
 }
 .middle .block-4 #logo-bottom #logotype {
     padding: 0 130px;
+}
+.middle .content .social {
+    width: 260px;
 }
 .middle .block-4 #logo-bottom p {
     font-family: Adelle;
@@ -2396,6 +2425,8 @@ header .logo span a{
 body{
 //  font-size: 23px;
 }
+.slider{
+    height: 535px;}
 }
 
 
@@ -2407,6 +2438,22 @@ body{
 
 @media only screen and (max-width : 800px),
 only screen and (max-device-width : 800px){
+  .reg input[type=text]{
+    font-size: 20px;
+  }
+  .reg input[type=password]{
+    font-size: 20px;
+  }
+  .links_modal a{
+    font-size: 18px;
+  }
+  .reg .writebutton{
+        margin-left: 115.5px;
+    font-size: 18px;
+  }
+  .slider {
+    height: 590px;
+  }
 .phones-descs  .two-phones {
     position: absolute;
     z-index: 333;
@@ -2424,7 +2471,9 @@ header .description-top {
 }
 .middle .block-2 .phones .description-middle {
     text-align: left;
-    margin-top: 20px;}
+    margin-top: 40px;
+        width: 93%;
+  }
 .middle .content .form-feedback .writebutton{
   font-size: 20px;
 }
@@ -2454,6 +2503,12 @@ header .description-top .buttons .button {
         img{
           width: 200px;
         }}
+        .middle .content .social {
+    width: 250px;
+}
+.middle .content .social a {
+    padding: 25px 30px 28px 30px;
+}
   .middle .content .form-feedback input[type=text]{font-size: 22px;}
   .middle .content .form-feedback textarea{font-size: 22px;}
   .header-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9983e+0,f9993e+25,fbb465+100 */
@@ -2555,6 +2610,16 @@ footer .bottom-menu div p a{
 }
 header .logo span a{
   font-size: 40px;
+}
+#index-phone-1,#index-phone-2,#index-phone-3{
+  display: none;
+}
+.middle .block-2 .phones .description-middle {
+    text-align: left;
+    margin-top: 80px;
+    left: 0%;
+    position: relative;
+    width: 93%;
 }
 body{
 //  font-size: 23px;
