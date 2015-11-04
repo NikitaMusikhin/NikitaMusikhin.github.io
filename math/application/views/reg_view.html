@@ -1,0 +1,20 @@
+
+<form name="regForm" novalidate ng-submit="addNewUser(user);" class="form">
+    <input type="text" name="login" ng-model="user.name" placeholder="Логин" ng-minlength="6" required>
+    <div class="error" ng-show="regForm.login.$dirty && regForm.login.$invalid">
+        {{getError(regForm.login.$error)}}
+    </div>
+    <input type="email" name="email" ng-model="user.mail" placeholder="Почта" required>
+    <div class="error" ng-show="regForm.email.$dirty && regForm.email.$invalid">
+        {{getError(regForm.email.$error)}}
+    </div>
+    <input type="password" name="pass" ng-model="user.password" placeholder="Пароль" ng-minlength="6" required>
+    <div class="error" ng-show="regForm.pass.$dirty && regForm.pass.$invalid">
+        {{getError(regForm.pass.$error)}}
+    </div>
+    <input type="password" name="secpassword" ng-model="user.secpassword" placeholder="Повторите пароль" ng-minlength="6" required>
+    <div class="error" ng-show="regForm.secpassword.$dirty && regForm.secpassword.$invalid">
+        {{getError(regForm.secpassword.$error)}}
+    </div>
+    <button type="submit" ng-disabled="regForm.$invalid">Зарегистрироваться</button>
+</form>
