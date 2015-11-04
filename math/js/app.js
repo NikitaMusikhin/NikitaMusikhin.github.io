@@ -5,7 +5,7 @@ $urlRouterProvider.otherwise("/reg");
 $stateProvider.
   state('reg', {
     url:'/reg',
-    templateUrl: 'http://nikitamusikhin.github.io/math/reg/application/views/reg_view.html',
+    templateUrl: 'NikitaMusikhin.github.io/math/application/views/reg_view.html',
     controller: 'regCtrl'
   });
 }]);
