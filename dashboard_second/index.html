@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/dependencies/jquery-2.1.4.min.js"></script>
+    <script src="js/graphics.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            var url = window.location.href;
+            $('.article-bg ul li a').each(function(){
+                url === this.href?$(this).addClass('active'):$(this).removeClass('active');
+            });
+            $('.article-bg ul li a').click(function(){
+                $('.article-bg ul li a').each(function(){
+                    $(this).removeClass('active');
+                });
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row wrapper">
+                    <article class="article-bg col-xs-2 col-sm-2 col-md-1">
+                        <ul>
+                            <li>
+                                <a href="" class="active"><img src="https://maxcdn.icons8.com/Color/PNG/48/Programming/dashboard-48.png" title="Dashboard" width="48"></a>
+                            </li>
+                            <li>
+                                <a href="#statistic"><img src="https://maxcdn.icons8.com/Color/PNG/48/Business/statistics-48.png" title="Statistics" width="48"></a>
+                            </li>
+                            <li>
+                                <a href="#settings"><img src="https://maxcdn.icons8.com/Color/PNG/48/Very_Basic/settings-48.png" title="Settings" width="48"></a>
+                            </li>
+                        </ul>
+                    </article>
+                    <main class="main-bg col-xs-10 col-sm-10 col-md-11">
+                        <div class="row pagename">
+                              <div class="col-sm-12 col-md-2">Dashboard</div>
+                        </div>
+                        <div class="row plitka">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                 <div class="plitka_element">
+                                     <a href="#">
+                                     <div class="picture"><img src="images/plus.png" alt=""></div>
+                                     <div class="description">
+                                         Аddition
+                                     </div>
+                                     </a>
+                                 </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="plitka_element">
+                                    <a href="#">
+                                    <div class="picture"><img src="images/minus.png" alt=""></div>
+                                    <div class="description">
+                                        Subtraction
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="plitka_element">
+                                    <a href="#">
+                                    <div class="picture"><img src="images/multiply.png" alt=""></div>
+                                    <div class="description">
+                                        Multiplication
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="plitka_element">
+                                    <a href="#">
+                                    <div class="picture"><img src="images/divide.png" alt=""></div>
+                                    <div class="description">
+                                        Division
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            </main>
+        </div>
+    </div>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+</body>
+</html>
