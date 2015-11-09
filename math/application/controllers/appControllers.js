@@ -52,7 +52,7 @@ function($scope,$rootScope,$localStorage,$location,UserService){
     }
 
     $scope.logout = function() {
-        UserService.out.logout({},function success(){
+        UserService.out.logout({userToken:$localStorage.token},function success(){
             delete $localStorage.token;
             $location.path('/login');
         },function err(){
