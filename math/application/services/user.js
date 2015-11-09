@@ -1,6 +1,19 @@
 angular.module('User')
 .constant('urlForResource','http://178.47.139.131\\:9000/')
-.factory('UserService',['$http','$resource','$localStorage','urlForResource',function($http,$resource,$localStorage,urlForResource){
+.factory('TokenService',['$localStorage',function($localStorage) {
+    $storage = $localStorage;
+    var _token='';
+    return {
+        setToken:function(token){
+            $storage.token = token;
+            _token:token;
+        },
+        getToken:function(){
+            return _token;
+        }
+    }
+}])
+.factory('UserService',['$http','$resource','$localStorage','urlForResource','TokenService',function($http,$resource,$localStorage,urlForResource,TokenService){
     return {
         auth : $resource(urlForResource+'authorization/user',{},{
             login:{
@@ -11,7 +24,7 @@ angular.module('User')
             logout:{
                 method:'DELETE',
                 headers:{
-                   'token':$localStorage.token
+                   'token':TokenService.getToken()
                 }
             }
         }),

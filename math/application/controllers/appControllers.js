@@ -5,7 +5,7 @@ angular.module('User',['ngResource','ngStorage'])
             alert('Поздравляем,вы успешно зарегистрированы!');
             $location.path('/login');
         },function err(){
-            alert(':(');
+            alert('So sad');
         });
         $scope.regForm.$setPristine();
         $scope.user = {};
@@ -24,11 +24,11 @@ angular.module('User',['ngResource','ngStorage'])
         }
     }
 }])
-.controller('loginCtrl',['$scope','$rootScope','$http','$localStorage','$location','UserService',function($scope,$rootScope,$http,$localStorage,$location,UserService){
-    $scope.$storage = $localStorage;
+.controller('loginCtrl',['$scope','$rootScope','$http','$location','UserService','TokenService',
+function($scope,$rootScope,$http,$location,UserService,TokenService){
     $scope.authorize = function(user){
          UserService.auth.login(user,function success(data){
-             $scope.$storage.token = data.token;
+             TokenService.setToken(data.token);
              $rootScope.user = data.user;
              $location.path('/dashboard');
         },function err(){
@@ -36,8 +36,17 @@ angular.module('User',['ngResource','ngStorage'])
         });
     };
 }])
-.controller('profCtrl',['$scope','$window','$rootScope','$localStorage','$location','UserService',
-function($scope,$window,$rootScope,$localStorage,$location,UserService){
+.controller('profCtrl',['$scope','$rootScope','$localStorage','$location','UserService',
+function($scope,$rootScope,$localStorage,$location,UserService){
+    $scope.logout = function() {
+        UserService.out.logout({},function success(){
+            delete $localStorage.token;
+            $location.path('/login');
+        },function err(){
+            alert(':(');
+        });
+    };
+    
     if($localStorage.token){
         if(!$rootScope.user){
             UserService.mathContext.isToken({},function success(data){
@@ -50,15 +59,6 @@ function($scope,$window,$rootScope,$localStorage,$location,UserService){
     }else{
         $location.path('/login');
     }
-
-    $scope.logout = function() {
-        UserService.out.logout({},function success(){
-            delete $localStorage.token;
-            $location.path('/login');
-        },function err(){
-            alert(':(');
-        });
-    };
 
     $rootScope.$watch('user',function() {
         $scope.profile = $rootScope.user;
