@@ -1,17 +1,14 @@
-angular.module('Ctrls',['ngResource'])
-.constant('urlForResource','This is URL')
-.controller('regCtrl',['$scope','$resource','urlForResource',function($scope,$resource,urlForResource){
-    var newUser = $resource(urlForResource,{},{
-        create:{method:'POST'}
-    });
+angular.module('User',['ngResource','ngStorage'])
+.controller('regCtrl',['$scope','$location','UserService',function($scope,$location,UserService){
     $scope.addNewUser = function(user){
-        if(user.password === user.secpassword){
-            newUser.create(user,function(newUser){
-                alert('Поздравляем,вы успешно зарегистрированы!');
-            });
-            $scope.regForm.$setPristine();
-            $scope.user = {};
-        }
+        UserService.user.create(user,function success(newUser){
+            alert('Поздравляем,вы успешно зарегистрированы!');
+            $location.path('/login');
+        },function err(){
+            alert('So sad');
+        });
+        $scope.regForm.$setPristine();
+        $scope.user = {};
     }
     $scope.getError = function(err){
         if(angular.isDefined(err)){
@@ -26,4 +23,42 @@ angular.module('Ctrls',['ngResource'])
             }
         }
     }
+}])
+.controller('loginCtrl',['$scope','$rootScope','$http','$localStorage','$location','UserService',function($scope,$rootScope,$http,$localStorage,$location,UserService){
+    $scope.$storage = $localStorage;
+    $scope.authorize = function(user){
+         UserService.auth.login(user,function success(data){
+             $scope.$storage.token = data.token;
+             $rootScope.user = data.user;
+             $location.path('/dashboard');
+        },function err(){
+            alert(':(');
+        });
+    };
+}])
+.controller('profCtrl',['$scope','$rootScope','$localStorage','$location','UserService',
+function($scope,$rootScope,$localStorage,$location,UserService){
+    $scope.logout = function() {
+        UserService.out.logout({},function success(){
+            delete $localStorage.token;
+            $location.path('/login');
+        },function err(){
+            alert(':(');
+        });
+    };
+    if($localStorage.token){
+        if(!$rootScope.user){
+            UserService.mathContext.isToken({},function success(data){
+                $rootScope.user = data.user;
+            },function err(){
+                console.log(arguments)
+                $location.path('/login');
+            });
+        }
+    }else{
+        $location.path('/login');
+    }
+    $rootScope.$watch('user',function() {
+        $scope.profile = $rootScope.user;
+    });
 }]);

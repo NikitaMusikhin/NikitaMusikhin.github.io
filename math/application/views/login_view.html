@@ -1,0 +1,8 @@
+<form name="loginForm" novalidate ng-submit="authorize(user);" class="form">
+    <input type="email" name="email" ng-model="user.email" placeholder="Почта" required>
+    <input type="password" name="pass" ng-model="user.password" placeholder="Пароль" ng-minlength="6" required>
+    <!--<div class="error" ng-show="errorAuth">
+        Ошибка авторизации.
+    </div>-->
+    <button type="submit" ng-disabled="loginForm.$invalid">Авторизоваться</button>
+</form>
