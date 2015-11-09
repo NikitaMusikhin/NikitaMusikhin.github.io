@@ -5,7 +5,7 @@ angular.module('User',['ngResource','ngStorage'])
             alert('Поздравляем,вы успешно зарегистрированы!');
             $location.path('/login');
         },function err(){
-            alert('So sad');
+            alert(':(');
         });
         $scope.regForm.$setPristine();
         $scope.user = {};
@@ -38,14 +38,6 @@ angular.module('User',['ngResource','ngStorage'])
 }])
 .controller('profCtrl',['$scope','$rootScope','$localStorage','$location','UserService',
 function($scope,$rootScope,$localStorage,$location,UserService){
-    $scope.logout = function() {
-        UserService.out.logout({},function success(){
-            delete $localStorage.token;
-            $location.path('/login');
-        },function err(){
-            alert(':(');
-        });
-    };
     if($localStorage.token){
         if(!$rootScope.user){
             UserService.mathContext.isToken({},function success(data){
@@ -58,6 +50,18 @@ function($scope,$rootScope,$localStorage,$location,UserService){
     }else{
         $location.path('/login');
     }
+
+    $scope.logout = function() {
+        UserService.out.logout({},function success(){
+            delete $localStorage.token;
+            $localStorage.$watch('token',function() {
+                $location.path('/login');
+            });
+        },function err(){
+            alert(':(');
+        });
+    };
+
     $rootScope.$watch('user',function() {
         $scope.profile = $rootScope.user;
     });
