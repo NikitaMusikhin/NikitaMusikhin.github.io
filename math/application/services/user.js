@@ -25,11 +25,11 @@ angular.module('User')
                 method:'GET'
             }
         }),
-        mathContext : $resource(urlForResource+'authorization/mathematicsContext',{userToken:'@token'},{
+        mathContext : $resource(urlForResource+'authorization/mathematicsContext',{},{
             isToken:{
                 method:'GET',
                 headers:{
-                   'token':userToken
+                   'token':$localStorage.token
                 }
             }
         })
