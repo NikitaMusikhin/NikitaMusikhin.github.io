@@ -36,8 +36,9 @@ angular.module('User',['ngResource','ngStorage'])
         });
     };
 }])
-.controller('profCtrl',['$scope','$rootScope','$localStorage','$location','UserService',
-function($scope,$rootScope,$localStorage,$location,UserService){
+.controller('profCtrl',['$scope','$window','$rootScope','$localStorage','$location','UserService',
+function($scope,$window,$rootScope,$localStorage,$location,UserService){
+    $window.location.reload();
     if($localStorage.token){
         if(!$rootScope.user){
             UserService.mathContext.isToken({},function success(data){
