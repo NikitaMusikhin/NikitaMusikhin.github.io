@@ -1,0 +1,89 @@
+<div class="row wrapper">
+            <nav class="nav-bg col-xs-2 col-sm-2 col-md-1">
+                <ul>
+                    <li>
+                        <a href="/#/dashboard" class="active"><img src="https://maxcdn.icons8.com/Color/PNG/48/Programming/dashboard-48.png" title="Dashboard" width="48"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://maxcdn.icons8.com/Color/PNG/48/Business/statistics-48.png" title="Statistics" width="48"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://maxcdn.icons8.com/Color/PNG/48/Very_Basic/settings-48.png" title="Settings" width="48"></a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="main-bg col-xs-10 col-sm-10 col-md-11">
+                <div class="row pagename">
+                      <div class="col-sm-12 col-md-2">Dashboard {{profile.email}}</div>
+                </div>
+                <div class="row plitka">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                         <div class="plitka_element">
+                             <a href="/#/example" ng-click="setExampleSettings('add');">
+                             <div class="picture"><img src="img/plus.png" alt=""></div>
+                             <div class="description">
+                                 Аddition
+                             </div>
+                            </a>
+                            <div class="slider">
+                                <input type="range" min="2" max="5" ng-model="qty_add.qty" />
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="plitka_element">
+                            <a href="/#/example" ng-click="setExampleSettings('sub');">
+                            <div class="picture"><img src="img/minus.png" alt=""></div>
+                            <div class="description">
+                                Subtraction
+                            </div>
+                            </a>
+                            <div class="slider">
+                                <input type="range" min="2" max="5" ng-model="qty_sub.qty" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="plitka_element">
+                            <a href="/#/example" ng-click="setExampleSettings('mull');">
+                            <div class="picture"><img src="img/multiply.png" alt=""></div>
+                            <div class="description">
+                                Multiplication
+                            </div>
+                            </a>
+                            <div class="slider">
+                                <input type="range" min="2" max="5" ng-model="qty_mull.qty" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="plitka_element">
+                            <a href="/#/example" ng-click="setExampleSettings('div');">
+                            <div class="picture"><img src="img/divide.png" alt=""></div>
+                            <div class="description">
+                                Division
+                            </div>
+                            </a>
+                            <div class="slider">
+                                <input type="range" min="2" max="5" ng-model="qty_div.qty" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+</div>
+<div class="btn btn-primary" ng-click="logout();">Logout</div>
+<script>
+    $(document).ready(function(){
+        var url = window.location.href;
+        $('.nav-bg ul li a').each(function(){
+            url === this.href?$(this).addClass('active'):$(this).removeClass('active');
+        });
+        $('.nav-bg ul li a').click(function(){
+            $('.nav-bg ul li a').each(function(){
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
+        });
+    });
+</script>

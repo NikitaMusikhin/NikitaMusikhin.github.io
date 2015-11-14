@@ -1,0 +1,56 @@
+<div class="row wrapper">
+            <nav class="nav-bg col-xs-2 col-sm-2 col-md-1">
+                <ul>
+                    <li>
+                        <a href="/#/dashboard"><img src="https://maxcdn.icons8.com/Color/PNG/48/Programming/dashboard-48.png" title="Dashboard" width="48"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://maxcdn.icons8.com/Color/PNG/48/Business/statistics-48.png" title="Statistics" width="48"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://maxcdn.icons8.com/Color/PNG/48/Very_Basic/settings-48.png" title="Settings" width="48"></a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="main-bg col-xs-10 col-sm-10 col-md-11">
+                <div class="row pagename">
+                      <div class="col-sm-12 col-md-3">{{settings.type}} - {{settings.mode}}  {{profile.email}}</div>
+                </div>
+                <div class="row examples">
+
+                    <div class="col-md-12">
+                        <div class="btn btn-default" ng-click="startSolutions();">Начать решать</div>
+                        <div class="btn btn-primary" ng-click="showResult = !showResult;">Показать реузльтаты</div>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-12 col-md-2" style="margin-top:20px;" ng-show="exampleReady">
+                        {{example.primer}}
+                        <input type="text" class="form-control" ng-model="example.userAnswer" ng-disabled="view.blockInput">
+                        <div class="btn btn-primary" style="margin-top:10px;"
+                        ng-click="saveSolution(example.userAnswer);generateNewExample();"
+                        ng-if="view.blockAnswer">Ответить</div>
+                    </div>
+
+
+                    <div class="col-md-12" ng-show="showResult">
+                        <div>Решено всего:{{counter.overall}}</div>
+                        <div>Решено правильно:{{counter.right}}</div>
+                        <div>Решено неправильно:{{counter.wrong}}</div>
+                    </div>
+                </div>
+    </main>
+</div>
+<script>
+/*    $(document).ready(function(){
+        var url = window.location.href;
+        $('.nav-bg ul li a').each(function(){
+            url === this.href?$(this).addClass('active'):$(this).removeClass('active');
+        });
+        $('.nav-bg ul li a').click(function(){
+            $('.nav-bg ul li a').each(function(){
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
+        });
+    });*/
+</script>
