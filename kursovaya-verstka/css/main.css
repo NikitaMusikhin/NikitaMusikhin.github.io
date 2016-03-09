@@ -39,6 +39,7 @@ header .user_panel {
 }
 
 .user_panel__userbar_right {
+	position: relative;
 	float: right;
 	font-size: 25px;
 }
@@ -131,12 +132,65 @@ section {
 .halls__table {
 	margin: 30px 0;
 }
-.halls__table a {
-	color: red;
-}
 .halls__table i {
 	font-size: 16px;
 }
 .halls__form {
 	margin: 30px 0;
+}
+.reviews__main_table table tbody tr {
+	cursor: pointer;
+}
+.films__form {
+	margin: 30px 0;
+}
+.session__main_table table tbody tr {
+	cursor: pointer;
+}
+.sessions__form {
+	margin: 30px 0;
+}
+
+.dropdownMainMenu {
+	text-align: left;
+    position: absolute;
+    top: 85%;
+    right: 9px;
+    z-index: 100;
+    display: none;
+    float: left;
+    min-width: 125px;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    background-color: #2185D0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    background-clip: padding-box;
+}
+.dropdownMainMenu.arrow:after {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -19px;
+    right: 25px;
+    content: "";
+    border: 10px solid transparent;
+    border-bottom: 10px solid #2185D0;
+    display: block;
+}
+
+.dropdownMainMenu a {
+	font-family: Helvetica;
+    padding: 5px 20px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+.dropdownMainMenu a:hover {
+	background-color: #fff;
+	color: #2185D0;
 }

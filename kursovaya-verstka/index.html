@@ -3,9 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin Panel</title>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script>
+		$(document).ready(function() {
+			$('#enterFilm').click(function(){
+				$(".films__form").toggle();
+			});
+
+			$("#enterSession").click(function(){
+				$(".sessions__form").toggle();
+			})
+
+			$("#enterHall").click(function(){
+				$(".halls__form").toggle();
+			});
+
+			$(".dropdown__arrow").click(function(){
+				$(".dropdownMainMenu").toggle();
+			});
+
+			$('#hallsPage').click(function(){
+				$('#halls').css({"display":"block"});
+				$('#films').css({"display":"none"});
+$('aside nav li a').each(function(){
+                    $(this).removeClass('active');
+                });
+				$(this).addClass('active');
+			});
+
+			$('#filmsPage').click(function(){
+				$('#halls').css({"display":"none"});
+				$('#films').css({"display":"block"});
+
+				$('aside nav li a').each(function(){
+                    $(this).removeClass('active');
+                });
+                $(this).addClass('active');
+				$(this).addClass('active');
+			});
+		})
+	</script>
 </head>
 <body>
 	<header>
@@ -15,14 +55,18 @@
 		<div class="user_panel">
 			<div class="user_panel__userbar_right">
 
-				<a href="#" class="notificacoes">
+				<a href="#" class="notificacoes" title="Неопубликованные отзывы">
 					<span>5</span>
 					<i class="comments icon"></i>
 				</a>
 
 				<span>admin</span>
 
-				<i class="angle down icon dropdown_icon"></i>
+				<i class="angle down icon dropdown_icon dropdown__arrow"></i>
+
+				<ul class="dropdownMainMenu arrow" style="display: none;">
+	                <li><a href="">Exit</a></li>
+	            </ul>
 			</div>
 		</div>
 	</header>
@@ -32,27 +76,16 @@
 			<nav>
 				<ul>
 					<li>
-						<a href=""><i class="dashboard icon"></i>Dashboard</a>
+						<a href="#" id="filmsPage" class="active"><i class="film icon"></i>Films</a>
 					</li>
 					<li>
-						<a href=""><i class="user icon"></i>Account</a>
-					</li>
-					<li>
-						<a href=""><i class="film icon"></i>Films</a>
-					</li>
-					<li>
-						<a href=""><i class="calendar icon"></i>Sessions</a>
-					</li>
-					<li>
-						<a href="" class="active"><i class="comments icon"></i>Reviews</a>
-					</li>
-					<li>
-						<a href=""><i class="sitemap icon"></i>Halls</a>
+						<a href="#" id="hallsPage"><i class="sitemap icon"></i>Halls</a>
 					</li>
 				</ul>
 			</nav>
 		</aside>
-		<section>
+
+		<section id="halls" style="display: none">
 			<span>Управление залами кинотеатра</span>
 
 			<div class="ui divider"></div>
@@ -70,18 +103,23 @@
 				    <tr>
 				      <td>1</td>
 				      <td>20</td>
-				      <td><a href=""><i class="remove icon"></i>Remove</a></td>
+				      <td><a href=""><i class="remove icon"></i></a></td>
 				    </tr>
 				    <tr>
 				      <td>2</td>
 				      <td>15</td>
-				      <td><a href=""><i class="remove icon"></i>Remove</a></td>
+				      <td><a href=""><i class="remove icon"></i></a></td>
 				    </tr>
 				  </tbody>
 				</table>
 			</div>
 
-			<div class="halls__form">
+
+			<div class="ui divider"></div>
+
+			<button class="fluid ui button" id="enterHall">Добавить зал</button>
+
+			<div class="halls__form" style="display:none;">
 				<form class="ui form">
 				  <div class="field">
 				    <label>Номер зала :</label>
@@ -101,6 +139,550 @@
 				  <button class="small ui blue button" type="submit">Добавить</button>
 				</form>
 			</div>
+		</section>
+		<section id="films" style="display: block">
+			<span>Управление фильмами</span>
+				<div class="ui divider"></div>
+				<div class="films__main_table">
+
+					<table class="ui selectable celled table">
+						  <thead>
+						    <tr>
+							    <th>Название</th>
+							    <th>Жанр</th>
+							    <th>Продолжительность</th>
+							    <th>Дата выхода</th>
+							    <th>Производство</th>
+							    <th>Действия</th>
+						  	</tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>Deadpool</td>
+						      <td>Боевик</td>
+						      <td>120 мин</td>
+						      <td>14.02.2016</td>
+						      <td>USA</td>
+						      <td>
+						      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+						      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+						      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+						      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>Deadpool</td>
+						      <td>Боевик</td>
+						      <td>120 мин</td>
+						      <td>14.02.2016</td>
+						      <td>USA</td>
+						      <td>
+						      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+						      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+						      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+						      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>Deadpool</td>
+						      <td>Боевик</td>
+						      <td>120 мин</td>
+						      <td>14.02.2016</td>
+						      <td>USA</td>
+						      <td>
+						      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+						      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+						      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+						      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>Deadpool</td>
+						      <td>Боевик</td>
+						      <td>120 мин</td>
+						      <td>14.02.2016</td>
+						      <td>USA</td>
+						      <td>
+						      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+						      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+						      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+						      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>Deadpool</td>
+						      <td>Боевик</td>
+						      <td>120 мин</td>
+						      <td>14.02.2016</td>
+						      <td>USA</td>
+						      <td>
+						      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+						      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+						      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+						      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+						      </td>
+						    </tr>
+
+						  </tbody>
+						  <tfoot>
+						    <tr><th colspan="6">
+						      <div class="ui right floated pagination menu">
+						        <a class="icon item">
+						          <i class="left chevron icon"></i>
+						        </a>
+						        <a class="item">1</a>
+						        <a class="item">2</a>
+						        <a class="item">3</a>
+						        <a class="item">4</a>
+						        <a class="icon item">
+						          <i class="right chevron icon"></i>
+						        </a>
+						      </div>
+						    </th>
+						  </tr></tfoot>
+						</table>
+				</div>
+
+				<div class="ui divider"></div>
+
+				<button class="fluid ui button" id="enterFilm">Добавить фильм</button>
+
+				<div class="films__form" style="display:none">
+					<form class="ui form">
+					  <div class="field">
+					    <label>Название фильма :</label>
+					    <input type="text" name="film-name" placeholder="название">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Жанр фильма :</label>
+					    <input type="text" name="film-type" placeholder="Жанр">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Продолжительность фильма (мин) :</label>
+					    <input type="text" name="film-duration" placeholder="Продолжительность">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Дата релиза :</label>
+					    <input type="text" name="release-date-type" placeholder="Дата">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Производство фильма :</label>
+					    <input type="text" name="film-production" placeholder="Производство">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Режиссеры фильма :</label>
+					    <input type="text" name="film-directors" placeholder="Режиссеры">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Описание фильма :</label>
+					    <textarea rows="2" name="film-description"></textarea>
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Актерский состав :</label>
+					    <input type="text" name="film-cast" placeholder="Актеры">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <div class="field">
+					    <label>Цена билета :</label>
+					    <input type="text" name="film-ticket-price" placeholder="Цена">
+					    <div class="ui pointing red basic label">
+					      Please enter a value
+					    </div>
+					  </div>
+					  <button class="small ui blue button" type="submit">Добавить</button>
+					</form>
+				</div>
+		<!-- БЛОК УПРАВЛЕНИЯ ЗАЛАМИ 
+			<span>Управление залами кинотеатра</span>
+
+			<div class="ui divider"></div>
+
+			<div class="halls__table">
+				<table class="ui selectable celled table">
+				  <thead>
+				    <tr>
+				      <th>Номер зала</th>
+				      <th>Количество Мест</th>
+				      <th>Действие</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>1</td>
+				      <td>20</td>
+				      <td><a href=""><i class="remove icon"></i></a></td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>15</td>
+				      <td><a href=""><i class="remove icon"></i></a></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+
+
+			<div class="ui divider"></div>
+
+			<button class="fluid ui button" id="enterHall">Добавить зал</button>
+
+			<div class="halls__form" style="display:none;">
+				<form class="ui form">
+				  <div class="field">
+				    <label>Номер зала :</label>
+				    <input type="text" name="hall-num" placeholder="Номер">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Количество мест :</label>
+				    <input type="text" name="hall-plases" placeholder="Места">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  
+				  <button class="small ui blue button" type="submit">Добавить</button>
+				</form>
+			</div>-->
+		
+
+		<!-- БЛОК УПРАВЛЕНИЕ ФИЛЬМАМИ 
+
+			<span>Управление фильмами</span>
+			<div class="ui divider"></div>
+			<div class="films__main_table">
+
+				<table class="ui selectable celled table">
+					  <thead>
+					    <tr>
+						    <th>Название</th>
+						    <th>Жанр</th>
+						    <th>Продолжительность</th>
+						    <th>Дата выхода</th>
+						    <th>Производство</th>
+						    <th>Действия</th>
+					  	</tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>Deadpool</td>
+					      <td>Боевик</td>
+					      <td>120 мин</td>
+					      <td>14.02.2016</td>
+					      <td>USA</td>
+					      <td>
+					      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+					      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+					      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+					      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>Deadpool</td>
+					      <td>Боевик</td>
+					      <td>120 мин</td>
+					      <td>14.02.2016</td>
+					      <td>USA</td>
+					      <td>
+					      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+					      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+					      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+					      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>Deadpool</td>
+					      <td>Боевик</td>
+					      <td>120 мин</td>
+					      <td>14.02.2016</td>
+					      <td>USA</td>
+					      <td>
+					      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+					      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+					      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+					      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>Deadpool</td>
+					      <td>Боевик</td>
+					      <td>120 мин</td>
+					      <td>14.02.2016</td>
+					      <td>USA</td>
+					      <td>
+					      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+					      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+					      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+					      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>Deadpool</td>
+					      <td>Боевик</td>
+					      <td>120 мин</td>
+					      <td>14.02.2016</td>
+					      <td>USA</td>
+					      <td>
+					      	<a href="" title="Редактировать фильм"><i class="edit icon"></i></a>
+					      	<a href="" title="Удалить фильм"><i class="remove icon"></i></a>
+					      	<a href="" title="Отзывы"><i class="thumbs up icon"></i></a>
+					      	<a href="" title="Сеансы"><i class="calendar icon"></i></a>
+					      </td>
+					    </tr>
+
+					  </tbody>
+					  <tfoot>
+					    <tr><th colspan="6">
+					      <div class="ui right floated pagination menu">
+					        <a class="icon item">
+					          <i class="left chevron icon"></i>
+					        </a>
+					        <a class="item">1</a>
+					        <a class="item">2</a>
+					        <a class="item">3</a>
+					        <a class="item">4</a>
+					        <a class="icon item">
+					          <i class="right chevron icon"></i>
+					        </a>
+					      </div>
+					    </th>
+					  </tr></tfoot>
+					</table>
+			</div>
+
+			<div class="ui divider"></div>
+
+			<button class="fluid ui button" id="enterFilm">Добавить фильм</button>
+
+			<div class="films__form" style="display:none">
+				<form class="ui form">
+				  <div class="field">
+				    <label>Название фильма :</label>
+				    <input type="text" name="film-name" placeholder="название">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Жанр фильма :</label>
+				    <input type="text" name="film-type" placeholder="Жанр">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Продолжительность фильма (мин) :</label>
+				    <input type="text" name="film-duration" placeholder="Продолжительность">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Дата релиза :</label>
+				    <input type="text" name="release-date-type" placeholder="Дата">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Производство фильма :</label>
+				    <input type="text" name="film-production" placeholder="Производство">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Режиссеры фильма :</label>
+				    <input type="text" name="film-directors" placeholder="Режиссеры">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Описание фильма :</label>
+				    <textarea rows="2" name="film-description"></textarea>
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Актерский состав :</label>
+				    <input type="text" name="film-cast" placeholder="Актеры">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Цена билета :</label>
+				    <input type="text" name="film-ticket-price" placeholder="Цена">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <button class="small ui blue button" type="submit">Добавить</button>
+				</form>
+			</div>
+		-->
+
+		<!-- ПОДМОДУЛЬ УПРАВЛЕНИЯ ОТЗЫВАМИ 
+	
+			<span>Управление отзывами</span>
+			<div class="ui divider"></div>
+			
+			<div class="reviews__main_table">
+				<table class="ui selectable celled table">
+				  <thead>
+				    <tr>
+					    <th>Имя</th>
+					    <th>Дата</th>
+					    <th>Отзыв</th>
+					    <th>Состояние</th>
+					    <th>Действие</th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>Андрей</td>
+				      <td>18.12.2015</td>
+				      <td>Фильм получился отврати...</td>
+				      <td>Не опубликован</td>
+				      <td>
+				      	<a href="" title="Одобрить отзыв"><i class="thumbs up icon"></i></a>
+				      	<a href="" title="Удалить отзыв"><i class="remove icon"></i></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Андрей</td>
+				      <td>18.12.2015</td>
+				      <td>Фильм получился отврати...</td>
+				      <td>Не опубликован</td>
+				      <td>
+				      	<a href="" title="Одобрить отзыв"><i class="thumbs up icon"></i></a>
+				      	<a href="" title="Удалить отзыв"><i class="remove icon"></i></a>
+				      </td>
+				    </tr>
+				  </tbody>
+				  <tfoot>
+				    <tr><th colspan="5">
+				      <div class="ui right floated pagination menu">
+				        <a class="icon item">
+				          <i class="left chevron icon"></i>
+				        </a>
+				        <a class="item">1</a>
+				        <a class="item">2</a>
+				        <a class="item">3</a>
+				        <a class="item">4</a>
+				        <a class="icon item">
+				          <i class="right chevron icon"></i>
+				        </a>
+				      </div>
+				    </th>
+				  </tr></tfoot>
+				</table>
+			</div>
+		-->
+
+		<!-- ПОДМОДУЛЬ УПРАВЛЕНИЯ СЕАНСАМИ 
+			<span>Управление сеансами</span>
+			<div class="ui divider"></div>
+			
+			<div class="sessions__main_table">
+				<table class="ui selectable celled table">
+				  <thead>
+				    <tr>
+					    <th>Номер зала</th>
+					    <th>Дата и время сеанса</th>
+					    <th>Билеты</th>
+					    <th>Действия</th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>3</td>
+				      <td>18.12.2015 19:40</td>
+				      <td>В наличии</td>
+				      <td>
+				      	<a href="" title="Редактировать сеанс"><i class="edit icon"></i></a>
+				      	<a href="" title="Удалить сеанс"><i class="remove icon"></i></a>
+					  </td>
+				    </tr>
+				  </tbody>
+				  <tfoot>
+				    <tr><th colspan="4">
+				      <div class="ui right floated pagination menu">
+				        <a class="icon item">
+				          <i class="left chevron icon"></i>
+				        </a>
+				        <a class="item">1</a>
+				        <a class="item">2</a>
+				        <a class="item">3</a>
+				        <a class="item">4</a>
+				        <a class="icon item">
+				          <i class="right chevron icon"></i>
+				        </a>
+				      </div>
+				    </th>
+				  </tr></tfoot>
+				</table>
+			</div>
+
+			<div class="ui divider"></div>
+
+			<button class="fluid ui button" id="enterSession">Добавить сеанс</button>
+
+			<div class="sessions__form" style="display:none;">
+				<form class="ui form">
+				  <div class="field">
+				    <label>Номер зала :</label>
+				    <input type="text" name="session-hall-num" placeholder="Номер">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Дата и время сеанса :</label>
+				    <input type="text" name="session-time-date" placeholder="Дата и время">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Наличие свободных мест :</label>
+				    <input type="text" name="session-free-plases" placeholder="Места">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  
+				  <button class="small ui blue button" type="submit">Добавить</button>
+				</form>
+			</div>
+			-->
 		</section>
 	</main>
 </body>
