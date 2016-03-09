@@ -8,102 +8,100 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="wrapper">
-		<header>
-			<div class="logo">
-				<span>Admin Panel</span>
+	<header>
+		<div class="logo">
+			<span>Admin Panel</span>
+		</div>
+		<div class="user_panel">
+			<div class="user_panel__userbar_right">
+
+				<a href="#" class="notificacoes">
+					<span>5</span>
+					<i class="comments icon"></i>
+				</a>
+
+				<span>admin</span>
+
+				<i class="angle down icon dropdown_icon"></i>
 			</div>
-			<div class="user_panel">
-				<div class="user_panel__userbar_right">
+		</div>
+	</header>
+	
+	<main>
+		<aside>
+			<nav>
+				<ul>
+					<li>
+						<a href=""><i class="dashboard icon"></i>Dashboard</a>
+					</li>
+					<li>
+						<a href=""><i class="user icon"></i>Account</a>
+					</li>
+					<li>
+						<a href=""><i class="film icon"></i>Films</a>
+					</li>
+					<li>
+						<a href=""><i class="calendar icon"></i>Sessions</a>
+					</li>
+					<li>
+						<a href="" class="active"><i class="comments icon"></i>Reviews</a>
+					</li>
+					<li>
+						<a href=""><i class="sitemap icon"></i>Halls</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<section>
+			<span>Управление залами кинотеатра</span>
 
-					<a href="#" class="notificacoes">
-						<span>5</span>
-						<i class="comments icon"></i>
-					</a>
+			<div class="ui divider"></div>
 
-					<span>admin</span>
-
-					<i class="angle down icon dropdown_icon"></i>
-				</div>
+			<div class="halls__table">
+				<table class="ui selectable celled table">
+				  <thead>
+				    <tr>
+				      <th>Номер зала</th>
+				      <th>Количество Мест</th>
+				      <th>Действие</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>1</td>
+				      <td>20</td>
+				      <td><a href=""><i class="remove icon"></i>Remove</a></td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>15</td>
+				      <td><a href=""><i class="remove icon"></i>Remove</a></td>
+				    </tr>
+				  </tbody>
+				</table>
 			</div>
-		</header>
-		
-		<main>
-			<aside>
-				<nav>
-					<ul>
-						<li>
-							<a href=""><i class="dashboard icon"></i>Dashboard</a>
-						</li>
-						<li>
-							<a href=""><i class="user icon"></i>Account</a>
-						</li>
-						<li>
-							<a href=""><i class="film icon"></i>Films</a>
-						</li>
-						<li>
-							<a href=""><i class="calendar icon"></i>Sessions</a>
-						</li>
-						<li>
-							<a href="" class="active"><i class="comments icon"></i>Reviews</a>
-						</li>
-						<li>
-							<a href=""><i class="sitemap icon"></i>Halls</a>
-						</li>
-					</ul>
-				</nav>
-			</aside>
-			<section>
-				<span>Управление залами кинотеатра</span>
 
-				<div class="ui divider"></div>
-
-				<div class="halls__table">
-					<table class="ui selectable celled table">
-					  <thead>
-					    <tr>
-					      <th>Номер зала</th>
-					      <th>Количество Мест</th>
-					      <th>Действие</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td>1</td>
-					      <td>20</td>
-					      <td><a href=""><i class="remove icon"></i>Remove</a></td>
-					    </tr>
-					    <tr>
-					      <td>2</td>
-					      <td>15</td>
-					      <td><a href=""><i class="remove icon"></i>Remove</a></td>
-					    </tr>
-					  </tbody>
-					</table>
-				</div>
-
-				<div class="halls__form">
-					<form class="ui form">
-					  <div class="field">
-					    <label>Номер зала :</label>
-					    <input type="text" name="hall-num" placeholder="Номер">
-					    <div class="ui pointing red basic label">
-					      Please enter a value
-					    </div>
-					  </div>
-					  <div class="field">
-					    <label>Количество мест :</label>
-					    <input type="text" name="hall-plases" placeholder="Места">
-					    <div class="ui pointing red basic label">
-					      Please enter a value
-					    </div>
-					  </div>
-					  
-					  <button class="small ui blue button" type="submit">Добавить</button>
-					</form>
-				</div>
-			</section>
-		</main>
-	</div>
+			<div class="halls__form">
+				<form class="ui form">
+				  <div class="field">
+				    <label>Номер зала :</label>
+				    <input type="text" name="hall-num" placeholder="Номер">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>Количество мест :</label>
+				    <input type="text" name="hall-plases" placeholder="Места">
+				    <div class="ui pointing red basic label">
+				      Please enter a value
+				    </div>
+				  </div>
+				  
+				  <button class="small ui blue button" type="submit">Добавить</button>
+				</form>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
